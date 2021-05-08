@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+# -*- coding: utf-8 -*-
+#
+set -x
+
+source ./common.sh
+
+volpref=$(grep "^alsa-gain" ~/.config/vlc/vlcrc)
+
+if [ -z $volpref ]; then
+    volpref="alsa-gain 0.065"
+fi
+
+
+log_opt="--verbose 1 --file-logging --logfile /var/run/vlcd/vlcd.log"
+daemon_opt="--no-quiet --daemon --pidfile /var/run/vlcd/vlcd.pid"
+log_opt="--verbose 2"
+daemon_opt=""
+
+while true; do
+
+    /usr/bin/time -v \
+                  ./vlc-3.0.12/build/bin/vlc-static \
+                  ${log_opt} \
+                  ${daemon_opt} \
+                  \
+                  --$volpref \
+                  \
+                  --audio-filter normvol \
+                  --norm-buff-size 40 \
+                  --norm-max-level 2.2 \
+                  \
+                  --playlist-tree \
+                  \
+                  --no-video \
+                  --preferred-resolution 144 \
+                  \
+                  --intf dummy \
+                  --extraintf rc:http \
+                  --rc-host 0.0.0.0:9294 --rc-fake-tty \
+                  --http-host 0.0.0.0 --http-port 8080 --http-password raspberry \
+                  ${playlist}
+
+done

@@ -1,0 +1,43 @@
+--- ./vlc-3.0.12/src/network/tls.c.orig	2021-01-18 05:31:01.000000000 +0900
++++ ./vlc-3.0.12/src/network/tls.c	2021-03-06 09:59:09.211379936 +0900
+@@ -624,9 +624,40 @@ vlc_tls_t *vlc_tls_SocketOpenTCP(vlc_obj
+     return NULL;
+ }
+ 
++#if 0
+ vlc_tls_t *vlc_tls_SocketOpenTLS(vlc_tls_creds_t *creds, const char *name,
+                                  unsigned port, const char *service,
+                                  const char *const *alpn, char **alp)
++#else
++
++vlc_tls_t *_vlc_tls_SocketOpenTLS(vlc_tls_creds_t *creds, const char *name,
++                                  unsigned port, const char *service,
++                                  const char *const *alpn, char **alp);
++
++vlc_tls_t *vlc_tls_SocketOpenTLS(vlc_tls_creds_t *creds, const char *name,
++                                 unsigned port, const char *service,
++                                 const char *const *alpn, char **alp)
++{
++  vlc_tls_t *tls = NULL;
++
++  for (int i = 0; i < 10; i += 1) {
++
++    tls = _vlc_tls_SocketOpenTLS(creds, name, port, service, alpn, alp);
++    if (tls != NULL) {
++      return tls;
++    }
++
++    msg_Err(creds, "retry vlc_tls_SocketOpenTLS(): %d\n", i);
++  }
++
++  return tls;
++}
++
++
++vlc_tls_t *_vlc_tls_SocketOpenTLS(vlc_tls_creds_t *creds, const char *name,
++                                  unsigned port, const char *service,
++                                  const char *const *alpn, char **alp)
++#endif
+ {
+     struct addrinfo hints =
+     {

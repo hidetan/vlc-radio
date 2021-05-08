@@ -1,0 +1,240 @@
+--- ./vlc-3.0.12/modules/access/http/resource.c.orig	2018-02-12 07:13:08.000000000 +0900
++++ ./vlc-3.0.12/modules/access/http/resource.c	2021-03-16 22:38:16.682078964 +0900
+@@ -36,6 +36,33 @@
+ #include "connmgr.h"
+ #include "resource.h"
+ 
++
++#include <fcntl.h>
++#include <unistd.h>
++#include <sys/stat.h>
++#include <sys/time.h>
++#include <sys/types.h>
++#include <sys/wait.h>
++
++char key_str[256] = { 0 };
++char val_str[256] = { 0 };
++char useragent_str[256] = { 0 };
++char last_auth_playlist[256] = { 0 };
++double last_auth_time = 0;
++
++double gettime(void);
++
++double gettime(void) {
++  struct timeval tm;
++  gettimeofday(&tm, NULL);
++  return (double)tm.tv_sec + ((double)tm.tv_usec / 1.0e6);
++}
++
++#define printf(args ...) do {                    \
++    fprintf(stdout, ##args);                     \
++    fflush(stdout);                              \
++  } while (0);
++
+ static struct vlc_http_msg *
+ vlc_http_res_req(const struct vlc_http_resource *res, void *opaque)
+ {
+@@ -62,8 +89,203 @@ vlc_http_res_req(const struct vlc_http_r
+         vlc_http_msg_add_creds_basic(req, false, res->username, res->password);
+ 
+     /* Request context */
++#if 0
+     if (res->agent != NULL)
+         vlc_http_msg_add_agent(req, res->agent);
++#else
++    printf("res->host=%s, res->path=%s\n",
++           (res->host == NULL ? "NULL" : res->host),
++           (res->path == NULL ? "NULL" : res->path));
++
++    char *radiko_check_host = getenv("radiko_check_host");
++    char *radiko_check_prefixpath = getenv("radiko_check_prefixpath");
++    size_t radiko_check_prefixpath_len = ((radiko_check_prefixpath == NULL) ? 0 : strlen(radiko_check_prefixpath));
++
++    char *radiko_auth_helper = getenv("radiko_auth_helper");
++    char *radiko_user_agent_file = getenv("radiko_user_agent_file");
++    char *radiko_auth_header_file = getenv("radiko_auth_header_file");
++
++    if ((res->host != NULL)
++        && (res->path != NULL)
++        && (radiko_check_host != NULL)
++        && (radiko_check_prefixpath != NULL)
++        && (strcmp(res->host, radiko_check_host) == 0)
++        && (strncmp(res->path, radiko_check_prefixpath, radiko_check_prefixpath_len) == 0)
++        && (radiko_auth_helper != NULL)
++        && (radiko_user_agent_file != NULL)
++        && (radiko_auth_header_file != NULL)
++        ) {
++
++      printf("*** HIT RADIKOPLAYLIST ***\n");
++
++      if ((last_auth_playlist[0] != '\0')
++          && (key_str[0] != '\0')
++          && (key_str[0] != '\0')
++          && (useragent_str[0] != '\0')
++          && (strcmp(res->path, last_auth_playlist) == 0)
++          ) {
++
++        double current_time = gettime();
++        if (current_time - last_auth_time < 60) {
++          printf("same playlistpath interval: %.3f\n",  gettime() - last_auth_time);
++          printf("REUSE KEY: %s, VAL: %s\n", key_str, val_str);
++          vlc_http_msg_add_header(req, key_str, "%s", val_str);
++          printf("REUSE User-Agent: %s\n", useragent_str);
++          vlc_http_msg_add_header(req, "User-Agent", "%s", useragent_str);
++
++          goto skip_radiko;
++        }
++      }
++
++      memset(last_auth_playlist, '\0', sizeof(last_auth_playlist));
++      memset(key_str, '\0', sizeof(key_str));
++      memset(val_str, '\0', sizeof(val_str));
++      memset(useragent_str, '\0', sizeof(useragent_str));
++
++      pid_t pid = fork();
++      if (pid < 0) {
++        perror("fork()");
++        goto skip_radiko;
++
++      } else if (pid == 0) {
++        execl(radiko_auth_helper, radiko_auth_helper, res->path, NULL);
++        perror("execl()");
++        goto skip_radiko;
++
++      }
++
++      int status;
++      pid_t ret = waitpid(pid, &status, 0);
++      if (ret < 0) {
++        perror("waitpid()");
++        goto skip_radiko;
++      }
++
++      printf("%s: %x\n", radiko_auth_helper, WEXITSTATUS(status));
++      if (! (WIFEXITED(status) && WEXITSTATUS(status) == 0)) {
++        goto skip_radiko;
++      }
++
++      int fd = open(radiko_auth_header_file, O_RDONLY);
++      if (fd == -1) {
++        goto skip_radiko;
++      } else {
++        unsigned long buf_size = sysconf(_SC_PAGESIZE);
++        char *buf = malloc(buf_size);
++        if (buf != NULL) {
++          memset(buf, 0, buf_size);
++
++          if (read(fd, buf, buf_size) > 0) {
++            char *key = buf;
++            unsigned int j = 0;
++            for (; key[j] != ':' && key[j] != '\0' && j < buf_size; j += 1);
++            key[j] = '\0';
++            for (j += 1; key[j] == ' ' && key[j] != '\0' && j < buf_size; j += 1);
++            char *val = &key[j];
++            for (j += 1; key[j] != '\n' && key[j] != '\r' && j < buf_size; j += 1);
++            key[j] = '\0';
++
++            printf("KEY: %s, VAL: %s\n", key, val);
++            strncpy(key_str, key, sizeof(key_str));
++            strncpy(val_str, val, sizeof(val_str));
++
++            vlc_http_msg_add_header(req, key, "%s", val);
++          }
++          free(buf);
++        }
++        close(fd);
++      }
++
++      fd = open(radiko_user_agent_file, O_RDONLY);
++      if (fd == -1) {
++        goto skip_radiko;
++      } else {
++        unsigned long buf_size = sysconf(_SC_PAGESIZE);
++        char *buf = malloc(buf_size);
++        if (buf != NULL) {
++          memset(buf, 0, buf_size);
++
++          if (read(fd, buf, buf_size) > 0) {
++            unsigned i = 0;
++            for (; buf[i] != ':' && buf[i] != '\0' && i < buf_size; i += 1);
++            char *useragent = &buf[i + 1];
++
++            printf("REUSE User-Agent: %s\n", useragent);
++            strncpy(useragent_str, useragent, sizeof(useragent_str));
++
++            vlc_http_msg_add_header(req, "User-Agent", "%s", useragent);
++          }
++          free(buf);
++        }
++        close(fd);
++      }
++
++      if ((key_str[0] != '\0')
++          && (val_str[0] != '\0')
++          && (useragent_str[0] != '\0')
++          ) {
++        strncpy(last_auth_playlist, res->path, sizeof(last_auth_playlist));
++        last_auth_time = gettime();
++      }
++
++    skip_radiko:
++      ;;
++
++    } else if ((res->host != NULL)
++               && (res->path != NULL)
++               && (radiko_check_host != NULL)
++               && (strcmp(res->host, radiko_check_host) == 0)
++               ) {
++
++      if (key_str[0] != '\0' && val_str[0] != '\0') {
++        printf("REUSE KEY: %s, VAL: %s\n", key_str, val_str);
++        vlc_http_msg_add_header(req, key_str, "%s", val_str);
++      }
++      if (useragent_str[0] != '\0') {
++        printf("REUSE User-Agent: %s\n", useragent_str);
++        vlc_http_msg_add_header(req, "User-Agent", "%s", useragent_str);
++      }
++    }
++
++    if ((res->host != NULL)
++        && (res->path != NULL)
++        ) {
++
++      if ((strcmp(res->host, "exit.exit") == 0)
++          && (strcmp(res->path, "/exit") == 0)) {
++        printf("force exit.\n");
++        char *argv[] = { (char *)"/bin/true", (char *)NULL };
++        int ret = execvp(argv[0], argv);
++        printf("execvp(%s) %d\n", argv[0], ret);
++      }
++
++      if ((strcmp(res->host, "reboot.reboot") == 0)
++          && (strcmp(res->path, "/reboot") == 0)) {
++        printf("exec reboot.\n");
++
++        int fd = open("/proc/self/cmdline", O_RDONLY);
++        if (fd != -1) {
++          unsigned long buf_size = sysconf(_SC_PAGESIZE);
++          char *buf = malloc(buf_size);
++          if (buf != NULL) {
++            memset(buf, 0, buf_size);
++            if (read(fd, buf, buf_size) > 0) {
++              char *argv[64] = { NULL };
++              for (unsigned long i = 0, j = 0; buf[j] != '\0' && j < buf_size; i += 1, j += 1) {
++                printf("%lu: %s\n", i, &buf[j]);
++                argv[i] = &buf[j];
++                for (; buf[j] != '\0' && j < buf_size; j += 1);
++              }
++              int ret = execvp(argv[0], argv);
++              printf("execvp(%s) %d\n", argv[0], ret);
++            }
++            free(buf);
++          }
++          close(fd);
++        }
++      }
++    }
++#endif
+ 
+     if (res->referrer != NULL) /* TODO: validate URL */
+         vlc_http_msg_add_header(req, "Referer", "%s", res->referrer);

@@ -1,0 +1,44 @@
+#EXTM3U
+# -*- coding: utf-8 -*-
+
+#-----#-----#-----#-----#-----#-----#-----#-----#-----#-----
+# https://www.afnpacific.net/
+
+#EXTINF:-1,AFN IWAKUNI
+https://14023.live.streamtheworld.com/AFNP_IWA_SC?csegid=33
+#EXTINF:-1,AFN MISAWA
+https://16693.live.streamtheworld.com/AFNP_MSW_SC?csegid=34
+#EXTINF:-1,AFN OKINAWA
+https://18703.live.streamtheworld.com/AFNP_OKN_SC?csegid=35
+#EXTINF:-1,AFN SASEBO
+https://20423.live.streamtheworld.com/AFNP_SBO_SC?csegid=37
+#EXTINF:-1,AFN TOKYO
+https://20813.live.streamtheworld.com/AFNP_TKO_SC?csegid=38
+
+#EXTINF:-1,AFN DAEGU
+https://13743.live.streamtheworld.com/AFNP_DGU_SC?csegid=31
+#EXTINF:-1,AFN HUMPHREYS
+https://17963.live.streamtheworld.com/AFNP_OSN_SC?csegid=36
+#EXTINF:-1,AFN KUNSAN
+https://22713.live.streamtheworld.com/AFNP_KSN_SC?csegid=32
+
+#EXTINF:-1,AFN 360 Global Country
+https://17963.live.streamtheworld.com/AFN_CTYP_SC?csegid=32
+#EXTINF:-1,AFN 360 Global Fans
+https://17533.live.streamtheworld.com/AFN_FAN_SC?csegid=32
+#EXTINF:-1,ANF 360 Global Freedom
+https://14103.live.streamtheworld.com/AFN_FREP_SC?csegid=32
+#EXTINF:-1,AFN 360 Global Gravity
+https://14103.live.streamtheworld.com/AFN_GRV_SC?csegid=32
+#EXTINF:-1,AFN 360 Global Hot AC
+https://16693.live.streamtheworld.com/AFN_HOTP_SC?csegid=32
+#EXTINF:-1,AFN 360 Global Joe Radio
+https://20423.live.streamtheworld.com/AFN_JOEP_SC?csegid=32
+#EXTINF:-1,AFN 360 Global Legacy
+https://17813.live.streamtheworld.com/AFN_LGYP_SC?csegid=32
+#EXTINF:-1,AFN 360 Global PowerTalk
+https://16693.live.streamtheworld.com/AFN_PTK_SC?csegid=32
+#EXTINF:-1,AFN 360 Global The Voice
+https://23113.live.streamtheworld.com/AFN_VCE_SC?csegid=32
+
+

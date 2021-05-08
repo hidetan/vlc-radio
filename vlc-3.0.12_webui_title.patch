@@ -1,0 +1,57 @@
+--- ./vlc-3.0.12/share/lua/http/js/controllers.js.orig	2017-11-25 00:29:18.000000000 +0900
++++ ./vlc-3.0.12/share/lua/http/js/controllers.js	2021-03-06 10:31:59.189990079 +0900
+@@ -1,6 +1,7 @@
+ var currentArt = null;
+ var current_que = 'main';
+ var current_playlist_id = -1;
++var current_playlist_name = '';
+ var previous_playlist_id = -1;
+ 
+ function updateArt(url) {
+@@ -15,7 +16,8 @@ function updateStatus() {
+         success: function (data, status, jqXHR) {
+             if (current_que == 'main') {
+                 $('.dynamic').empty();
+-                $('#mediaTitle').append($('[name="filename"]', data).text());
++                //$('#mediaTitle').append($('[name="filename"]', data).text());
++                $('#mediaTitle').append(current_playlist_name);
+                 $('#totalTime').append(format_time($('length', data).text()));
+                 $('#currentTime').append(format_time($('time', data).text()));
+                 if (!$('#seekSlider').data('clicked')) {
+@@ -138,6 +140,7 @@ function updatePlayList(force_refresh) {
+             var id = $(this).attr('id');
+             if (id != null && id.substr(0,5) == 'plid_') {
+                 if ( id.substr(5) == current_playlist_id ) {
++                    current_playlist_name = $(this).parents("li").attr('name') + ' / ' + $(this).attr('name');
+                     $(this).addClass('ui-state-highlight');
+                     $(this).attr('current', 'current');
+                     this.scrollIntoView(true);
+@@ -357,7 +360,8 @@ function updateStreams() {
+             });
+             if (current_que == 'stream') {
+                 $('.dynamic').empty();
+-                $('#mediaTitle').append($('[name="Current"] input', data).text());
++                //$('#mediaTitle').append($('[name="Current"] input', data).text());
++                $('#mediaTitle').append(current_playlist_name);
+                 $('#totalTime').append(format_time(isNaN($('[name="Current"] instance', data).attr('length')) ? 0 : $('[name="Current"] instance', data).attr('length') / 1000000));
+                 $('#currentTime').append(format_time(isNaN($('[name="Current"] instance', data).attr('time')) ? 0 : $('[name="Current"] instance', data).attr('time') / 1000000));
+                 $('#seekSlider').slider({
+@@ -512,15 +516,18 @@ $(function () {
+         $('[current]', '[id^="plid_"]').each(function () {
+             $(this).addClass('ui-state-highlight');
+             current_playlist_id = $(this).attr('id').substr(5);
++            current_playlist_name = $(this).parents("li").attr('name') + ' / ' + $(this).attr('name');
+         });
+     }).bind("refresh.jstree", function (event, data) {
+         $('[current]', '[id^="plid_"]').each(function () {
+             $(this).addClass('ui-state-highlight');
+             current_playlist_id = $(this).attr('id').substr(5);
++            current_playlist_name = $(this).parents("li").attr('name') + ' / ' + $(this).attr('name');
+         });
+     }).delegate("#plid_0 li.jstree-leaf a", "click", function (event, data) {
+         event.preventDefault();
+         current_playlist_id = $(this).parent().attr('id').substr(5);
++        current_playlist_name = $(this).parent().parents("li").attr('name') + ' / ' + $(this).parent().attr('name');
+         sendCommand('command=pl_play&id=' + current_playlist_id);
+     });
+     updateStatus();

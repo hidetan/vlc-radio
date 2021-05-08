@@ -1,0 +1,202 @@
+#EXTM3U
+# -*- coding: utf-8 -*-
+
+#-----#-----#-----#-----#-----#-----#-----#-----#-----#-----
+#EXTM3U
+# https://radio.nrk.no/
+# https://lyd.nrk.no/
+
+#EXTINF:-1,NRK P1 ostlandssendingen
+#https://lyd.nrk.no/nrk_radio_p1_ostlandssendingen_aac_h.m3u
+http://lyd.nrk.no:80/nrk_radio_p1_ostlandssendingen_aac_h?_hdr=0
+
+#EXTINF:-1,NRK P1+
+#https://lyd.nrk.no/nrk_radio_p1pluss_aac_h.m3u
+http://lyd.nrk.no:80/nrk_radio_p1pluss_aac_h?_hdr=0
+
+#EXTINF:-1,NRK P2
+#https://lyd.nrk.no/nrk_radio_p2_aac_h.m3u
+http://lyd.nrk.no:80/nrk_radio_p2_aac_h?_hdr=0
+
+#EXTINF:-1,NRK P3
+#https://lyd.nrk.no/nrk_radio_p3_aac_h.m3u
+http://lyd.nrk.no:80/nrk_radio_p3_aac_h?_hdr=0
+
+#EXTINF:-1,NRK P13
+#https://lyd.nrk.no/nrk_radio_p13_aac_h.m3u
+http://lyd.nrk.no:80/nrk_radio_p13_aac_h?_hdr=0
+
+#EXTINF:-1,NRK mP3
+#https://lyd.nrk.no/nrk_radio_mp3_aac_h.m3u
+http://lyd.nrk.no:80/nrk_radio_mp3_aac_h?_hdr=0
+
+#EXTINF:-1,NRK Alltid Nyheter
+#https://lyd.nrk.no/nrk_radio_alltid_nyheter_aac_h.m3u
+http://lyd.nrk.no:80/nrk_radio_alltid_nyheter_aac_h?_hdr=0
+
+#EXTINF:-1,NRK Radio Super
+#https://lyd.nrk.no/nrk_radio_super_aac_h.m3u
+http://lyd.nrk.no:80/nrk_radio_super_aac_h?_hdr=0
+
+#EXTINF:-1,NRK Klassisk
+#https://lyd.nrk.no/nrk_radio_klassisk_aac_h.m3u
+http://lyd.nrk.no:80/nrk_radio_klassisk_aac_h?_hdr=0
+
+#EXTINF:-1,NRK Sami
+#https://lyd.nrk.no/nrk_radio_sami_aac_h.m3u
+http://lyd.nrk.no:80/nrk_radio_sami_aac_h?_hdr=0
+
+#EXTINF:-1,NRK Jazz
+#https://lyd.nrk.no/nrk_radio_jazz_aac_h.m3u
+http://lyd.nrk.no:80/nrk_radio_jazz_aac_h?_hdr=0
+
+#EXTINF:-1,NRK Folkemusikk
+#https://lyd.nrk.no/nrk_radio_folkemusikk_aac_h.m3u
+http://lyd.nrk.no:80/nrk_radio_folkemusikk_aac_h?_hdr=0
+
+#EXTINF:-1,NRK Sport
+#https://lyd.nrk.no/nrk_radio_sport_aac_h.m3u
+http://lyd.nrk.no:80/nrk_radio_sport_aac_h?_hdr=0
+
+#EXTINF:-1,NRK Urort
+#https://lyd.nrk.no/nrk_radio_p3_urort_aac_h.m3u
+http://lyd.nrk.no:80/nrk_radio_p3_urort_aac_h?_hdr=0
+
+#EXTINF:-1,NRK Radioresepsjonen
+#https://lyd.nrk.no/nrk_radio_p3_radioresepsjonen_aac_h.m3u
+http://lyd.nrk.no:80/nrk_radio_p3_radioresepsjonen_aac_h?_hdr=0
+
+#EXTINF:-1,NRK P3X
+#https://lyd.nrk.no/nrk_radio_p3x_aac_h.m3u
+http://lyd.nrk.no:80/nrk_radio_p3x_aac_h?_hdr=0
+
+
+#-----#-----#-----#-----#-----#-----#-----#-----#-----#-----
+#EXTM3U
+# https://sverigesradio.se/
+# https://sverigesradio.se/grupp/10632
+
+#EXTINF:-1,Sveriges Radio P1
+#https://sverigesradio.se/topsy/direkt/132-hi-aac.m3u
+https://http-live.sr.se/p1-aac-192
+
+#EXTINF:-1,Sveriges Radio P2
+#https://sverigesradio.se/topsy/direkt/2562-hi-aac.m3u
+https://http-live.sr.se/p2-aac-192
+
+#EXTINF:-1,Sveriges Radio P3
+#https://sverigesradio.se/topsy/direkt/164-hi-aac.m3u
+https://http-live.sr.se/p3-aac-192
+
+#EXTINF:-1,Sveriges Radio P4 Stockholm
+#https://sverigesradio.se/topsy/direkt/701-hi-aac.m3u
+https://http-live.sr.se/p4stockholm-aac-192
+
+#EXTINF:-1,Sveriges Radio Ekot
+#https://sverigesradio.se/topsy/direkt/4540-hi-aac.m3u
+https://http-live.sr.se/ekotsanderdirekt-aac-192
+
+#EXTINF:-1,Sveriges Radio P4 Plus
+#https://sverigesradio.se/topsy/direkt/4951-hi-aac.m3u
+https://http-live.sr.se/srextra17-aac-192
+
+#EXTINF:-1,Sveriges Radio P3 Din gata
+#https://sverigesradio.se/topsy/direkt/2576-hi-aac.m3u
+https://http-live.sr.se/dingata-aac-192
+
+#EXTINF:-1,Sveriges Radio P2 Sprak och musik
+#https://sverigesradio.se/topsy/direkt/163-hi-aac.m3u
+https://http-live.sr.se/p2musik-aac-192
+
+#EXTINF:-1,Sveriges Radio P6
+#https://sverigesradio.se/topsy/direkt/166-hi-aac.m3u
+https://http-live.sr.se/srinternational-aac-192
+
+#EXTINF:-1,Sveriges Radio Radioapans knattekanal
+#https://sverigesradio.se/topsy/direkt/2755-hi-aac.m3u
+https://http-live.sr.se/knattekanalen-aac-192
+
+#EXTINF:-1,Sveriges Radio SR Sapmi
+#https://sverigesradio.se/topsy/direkt/224-hi-aac.m3u
+https://http-live.sr.se/srsapmi-aac-192
+
+#EXTINF:-1,Sveriges Radio SR Sisuradio
+#https://sverigesradio.se/topsy/direkt/226-hi-aac.m3u
+https://http-live.sr.se/sisuradio-aac-192
+
+#-----#-----#-----#-----#-----#-----#-----#-----#-----#-----
+#EXTM3U
+# https://www.dr.dk/
+# https://www.dr.dk/hjaelp/digtal-radio/direkte-links-til-dr-radio-paa-nettet
+
+#EXTINF:-1,Denmarks Radio P1
+https://drliveradio.akamaized.net/hls/live/2022411/p1/masterab.m3u8
+
+#EXTINF:-1,Denmarks Radio P2
+https://drliveradio.akamaized.net/hls/live/2022411/p2/masterab.m3u8
+
+#EXTINF:-1,Denmarks Radio P3
+https://drliveradio.akamaized.net/hls/live/2022411/p3/masterab.m3u8
+
+#EXTINF:-1,Denmarks Radio P4 Kobenhavn
+https://drliveradio.akamaized.net/hls/live/2022411/p4kobenhavn/masterab.m3u8
+
+#EXTINF:-1,Denmarks Radio P5 Kobenhavn
+https://drliveradio.akamaized.net/hls/live/2022411/p5kobenhavn/masterab.m3u8
+
+#EXTINF:-1,Denmarks Radio P6 BEAT
+https://drliveradio.akamaized.net/hls/live/2022411/p6beat/masterab.m3u8
+
+#EXTINF:-1,Denmarks Radio P8 JAZZ
+https://drliveradio.akamaized.net/hls/live/2022411/p8jazz/masterab.m3u8
+
+
+#-----#-----#-----#-----#-----#-----#-----#-----#-----#-----
+#EXTM3U
+# https://areena.yle.fi/
+# https://github.com/oniongarlic/yle-api
+
+#EXTINF:-1,Yle Radio 1
+http://yleuni-f.akamaihd.net/i/yleliveradiohd_1@113878/master.m3u8
+
+#EXTINF:-1,Yle Radio Suomi
+http://yleuni-f.akamaihd.net/i/yleliveradiohd_3@113880/master.m3u8
+
+#EXTINF:-1,YleX
+http://yleuni-f.akamaihd.net/i/yleliveradiohd_2@113879/master.m3u8
+
+#EXTINF:-1,Yle Puhe
+http://yleuni-f.akamaihd.net/i/yleliveradiohd_5@113882/master.m3u8
+
+#EXTINF:-1,Yle X3M
+http://yleuni-f.akamaihd.net/i/yleliveradiohd_6@113883/master.m3u8
+
+#EXTINF:-1,Yle Klassinen
+http://yleuni-f.akamaihd.net/i/yleliveradiohd_4@113881/master.m3u8
+
+#EXTINF:-1,Yle Radio Vega
+http://yleuni-f.akamaihd.net/i/yleliveradiohd_7@113884/master.m3u8
+
+#EXTINF:-1,Yle Helsinki
+http://yleuni-f.akamaihd.net/i/yleliveradiohd_3@113880/master.m3u8
+
+#EXTINF:-1,Yle Sami radio
+http://yleuni-f.akamaihd.net/i/yleliveradiohd_33@113910/master.m3u8
+
+
+#-----#-----#-----#-----#-----#-----#-----#-----#-----#-----
+#EXTM3U
+# https://www.ruv.is/
+
+#EXTINF:-1,RUV Ras 1
+https://ruv-ras1-live-hls.secure.footprint.net/hls-live/ruv-ras1/_definst_/live.m3u8
+
+#EXTINF:-1,RUV Ras 2
+https://ruv-ras2-live-hls.secure.footprint.net/hls-live/ruv-ras2/_definst_/live.m3u8
+
+#EXTINF:-1,RUV Rondo
+https://ruv-rondo-live-hls.secure.footprint.net/hls-live/ruv-ras3/_definst_/live.m3u8
+
+
+#-----#-----#-----#-----#-----#-----#-----#-----#-----#-----
+

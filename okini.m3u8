@@ -1,0 +1,218 @@
+#EXTM3U
+# -*- coding: utf-8 -*-
+
+#-----#-----#-----#-----#-----#-----#-----#-----#-----#-----
+
+#EXTINF:-1,湘南ビーチFM
+https://shonanbeachfm.out.airtime.pro/shonanbeachfm_c
+
+#EXTINF:-1,J-WAVE
+https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=FMJ&l=30
+#EXTINF:-1,ＦＭヨコハマ
+https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=YFM&l=30
+#EXTINF:-1,TOKYO FM
+https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=FMT&l=30
+#EXTINF:-1,InterFM897
+https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=INT&l=30
+
+#EXTINF:-1,LOVE FM
+https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=LOVEFM&l=30
+
+#EXTINF:-1,NHKラジオ第1 東京
+https://nhkradioakr1-i.akamaihd.net/hls/live/511633/1-r1/1-r1-01.m3u8
+#EXTINF:-1,NHK-FM 東京
+https://nhkradioakfm-i.akamaihd.net/hls/live/512290/1-fm/1-fm-01.m3u8
+
+#EXTINF:-1,エフエム世田谷
+https://radio1.bitmedia.ne.jp/hlsdata/fm834/playlist.m3u8
+
+#EXTINF:-1,Date fm エフエム仙台
+https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=DATEFM&l=30
+#EXTINF:-1,fmいずみ 仙台市泉区
+http://mtist.as.smartstream.ne.jp/30018/livestream/playlist.m3u8
+#EXTINF:-1,TBCラジオ
+https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=TBC&l=30
+#EXTINF:-1,ＲＡＢ青森放送
+https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=RAB&l=30
+#EXTINF:-1,AFN MISAWA
+https://16693.live.streamtheworld.com/AFNP_MSW_SC?csegid=34
+
+#EXTINF:-1,bayfm78
+https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=BAYFM78&l=30
+#EXTINF:-1,NACK5
+https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=NACK5&l=30
+#EXTINF:-1,FM FUJI
+https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=FM-FUJI&l=30
+
+#EXTINF:-1,TBSラジオ
+https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=TBS&l=30
+#EXTINF:-1,文化放送
+https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=QRR&l=30
+#EXTINF:-1,ニッポン放送
+https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=LFR&l=30
+#EXTINF:-1,ラジオ日本
+https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=JORF&l=30
+#EXTINF:-1,ラジオNIKKEI第1
+https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=RN1&l=30
+
+#EXTINF:-1,FM COCOLO
+https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=CCL&l=30
+#EXTINF:-1,α-STATION FM京都
+https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=ALPHA-STATION&l=30
+
+#EXTINF:-1,FM NORTH WAVE
+https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=NORTHWAVE&l=30
+#EXTINF:-1,ZIP-FM
+https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=ZIP-FM&l=30
+#EXTINF:-1,FM802
+https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=802&l=30
+#EXTINF:-1,CROSS FM
+https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=CROSSFM&l=30
+
+
+#EXTINF:-1,FMゆーとぴあ 湯沢市
+http://mtist.as.smartstream.ne.jp/30030/livestream/playlist.m3u8
+#EXTINF:-1,BeFM 八戸市
+http://mtist.as.smartstream.ne.jp/30079/livestream/playlist.m3u8
+#EXTINF:-1,FMいるか 函館市
+http://mtist.as.smartstream.ne.jp/30047/livestream/playlist.m3u8
+#EXTINF:-1,マリンFM 横浜市中区
+http://mtist.as.smartstream.ne.jp/30065/livestream/playlist.m3u8
+#EXTINF:-1,あまみエフエム 奄美市
+http://mtist.as.smartstream.ne.jp/30054/livestream/playlist.m3u8
+#EXTINF:-1,FMいしがきサンサンラジオ 石垣市
+http://mtist.as.smartstream.ne.jp/30069/livestream/playlist.m3u8
+
+
+#-----#-----#-----#-----#-----
+# https://smoothjazz.com.pl
+#EXTINF:-1,SmoothJazz.com.pl
+http://stream14.shoutcastsolutions.com:8057/64stream
+
+# https://www.wanderingsheep.tv/JazzCafeRadio/
+#EXTINF:-1,Jazz Cafe
+http://radio.wanderingsheep.tv:8059/jazzcafe320
+
+# https://www.jazz24.org
+#EXTINF:-1,Jazz24
+https://prod-3-82-192-167.wostreaming.net/ppm-jazz24aac-hlsc1.m3u8
+
+# https://www.wncu.org
+#EXTINF:-1,WNCU 90.7 FM Jazz Radio
+https://wncu.streamguys1.com/live
+
+# https://ottava.jp
+#EXTINF:-1,OTTAVA
+https://ottava.out.airtime.pro/ottava_b
+
+# https://www.hawaiianrainbow.com
+#EXTINF:-1,Hawaiian Rainbow
+http://stream1.hawaiianrainbow.com
+
+#EXTINF:-1,181.FM Awesome 80s
+http://listen.181fm.com/181-awesome80s_128k.mp3
+
+#-----#-----#-----#-----#-----
+#
+# Bhoutan Radio Stations
+#
+
+# https://www.facebook.com/radiovalleybhutan/
+#EXTINF:-1,Radio Valley FM 99.9
+http://103.29.225.97:8000/radiovalley
+
+# https://www.kuzoofm.com
+#EXTINF:-1,Kuzoo FM
+http://43.241.137.236:8000/kuzoodzo
+#EXTINF:-1,Kuzoo FM (English)
+http://43.241.137.236:8000/Kuzooeng
+
+# http://www.bbs.bt/news/
+#EXTINF:-1,BBS1
+http://202.144.155.12/radio1
+#EXTINF:-1,BBS2
+http://202.144.155.12/radio2
+
+#-----#-----#-----#-----#-----
+
+#EXTINF:-1,RADIONL
+https://stream.radionl.fm/radionl
+
+#EXTINF:-1,Oke FM
+#http://www.goedkoopstreamen.nl/luister/aalburgfm/mp3/
+http://aalburgfm.gkstreamen.nl:80
+
+
+#EXTINF:-1,laut.fm irish-folk
+#https://laut.fm/irish-folk
+https://irish-folk.stream.laut.fm/irish-folk
+
+#EXTINF:-1,irish-folk scoteire
+#https://laut.fm/scoteire
+https://scoteire.stream.laut.fm/scoteire
+
+
+# http://www.celticradio.net/
+#EXTINF:-1,Celtic Moon
+https://jenny.torontocast.com:2000/stream/CelticMoon
+#EXTINF:-1,Highlander Radio
+http://jenny.torontocast.com:8094/stream
+#EXTINF:-1,Salty Dog Radio
+http://jenny.torontocast.com:8078/stream
+
+
+# https://www.nogoumfm.net/
+#EXTINF:-1,Nogoum FM
+https://reach-audio.esteam.rocks/radio/8000/live.mp3
+
+#-----#-----#-----#-----#-----
+# over 10kW
+
+#EXTINF:-1,北海道・東北 / ＨＢＣラジオ HBC JP1
+https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=HBC&l=30
+#EXTINF:-1,北海道・東北 / ＳＴＶラジオ STV JP1
+https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=STV&l=30
+#EXTINF:-1,中部 / SBSラジオ SBS JP22
+https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=SBS&l=30
+#EXTINF:-1,中部 / CBCラジオ CBC JP23
+https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=CBC&l=30
+#EXTINF:-1,中部 / 東海ラジオ TOKAIRADIO JP23
+https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=TOKAIRADIO&l=30
+#EXTINF:-1,近畿 / KBS京都ラジオ KBS JP26
+https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=KBS&l=30
+#EXTINF:-1,近畿 / ABCラジオ ABC JP27
+https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=ABC&l=30
+#EXTINF:-1,近畿 / MBSラジオ MBS JP27
+https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=MBS&l=30
+#EXTINF:-1,近畿 / OBCラジオ大阪 OBC JP27
+https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=OBC&l=30
+#EXTINF:-1,近畿 / ラジオ関西 CRK JP28
+https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=CRK&l=30
+#EXTINF:-1,中国・四国 / ＲＳＫラジオ RSK JP33
+https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=RSK&l=30
+#EXTINF:-1,中国・四国 / RCCラジオ RCC JP34
+https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=RCC&l=30
+#EXTINF:-1,九州・沖縄 / RKBラジオ RKB JP40
+https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=RKB&l=30
+#EXTINF:-1,九州・沖縄 / KBCラジオ KBC JP40
+https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=KBC&l=30
+#EXTINF:-1,九州・沖縄 / RKKラジオ RKK JP43
+https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=RKK&l=30
+#EXTINF:-1,九州・沖縄 / ＭＢＣラジオ MBC JP46
+https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=MBC&l=30
+#EXTINF:-1,九州・沖縄 / RBCiラジオ RBC JP47
+https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=RBC&l=30
+#EXTINF:-1,九州・沖縄 / ラジオ沖縄 ROK JP47
+https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=ROK&l=30
+
+
+#-----#-----#-----#-----#-----#-----#-----#-----#-----#-----
+#EXTINF:-1,*** REBOOT(replace new process image) VLC ***
+http://reboot.reboot/reboot
+
+#EXTINF:-1,*** REBOOT(process termination) VLC ***
+http://exit.exit/exit
+
+#EXTINF:0,NHKラジオニュース
+https://www.nhk.or.jp/r-news/podcast/nhkradionews.xml
+
