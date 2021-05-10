@@ -5,6 +5,7 @@
 #
 
 import os
+import re
 import sys
 import urllib3
 import xml.etree.ElementTree as ET
@@ -48,14 +49,17 @@ root = ET.fromstring(r.data.decode('utf-8'))
 for stations in root.iter('stations'):
     region_name = stations.attrib['region_name']
 
+    ST = {}
     for station in stations.iter('station'):
         station_id = station.find('id').text
         station_name = station.find('name').text
         area_id = station.find('area_id').text
-        ST[station_id] = { 'name': station_name, 'id': area_id }
+        ST[station_id] = { 'name': station_name, 'area_id': area_id }
 
-        title = '#EXTINF:-1,%s / %s %s %s\n' % (region_name, station_name, station_id, area_id)
-        uri = 'https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=%s&l=15\n\n' % (station_id)
+#    for t in sorted(ST.items(), key = lambda x:x[1]['area_id']):
+    for t in sorted(ST.items(), key = lambda x:int(re.sub(r"\D", "", x[1]['area_id']))):
+        title = '#EXTINF:-1,%s / %s %s %s\n' % (region_name, t[1]['name'], t[0], t[1]['area_id'])
+        uri = 'https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=%s&l=15\n\n' % (t[0])
 
         print(title, end = '')
         f.write(title)
