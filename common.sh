@@ -35,8 +35,10 @@ make_playlist "csra_playlist" "csra.m3u8" "./csra_playlist.py"
 
 make_playlist "radiko_playlist" "radiko.m3u8" "./radiko_playlist.py"
 if [ -n "${radiko_playlist}" ]; then
-    export radiko_check_host="radiko.jp"
-    export radiko_check_prefixpath="/v2/api/ts/playlist.m3u8?station_id="
+#    export radiko_check_host="radiko.jp"
+#    export radiko_check_path="/v2/api/ts/playlist.m3u8?station_id="
+    export radiko_check_host="f-radiko.smartstream.ne.jp"
+    export radiko_check_path="/_definst_/simul-stream.stream/playlist.m3u8"
 
     export radiko_auth_helper="./radiko_auth.py"
     export radiko_auth_key="./radiko_key.txt"

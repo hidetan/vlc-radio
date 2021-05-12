@@ -1,5 +1,5 @@
 --- ./vlc-3.0.12/modules/access/http/resource.c.orig	2018-02-12 07:13:08.000000000 +0900
-+++ ./vlc-3.0.12/modules/access/http/resource.c	2021-03-16 22:38:16.682078964 +0900
++++ ./vlc-3.0.12/modules/access/http/resource.c	2021-05-13 07:43:05.490531461 +0900
 @@ -36,6 +36,33 @@
  #include "connmgr.h"
  #include "resource.h"
@@ -34,7 +34,7 @@
  static struct vlc_http_msg *
  vlc_http_res_req(const struct vlc_http_resource *res, void *opaque)
  {
-@@ -62,8 +89,203 @@ vlc_http_res_req(const struct vlc_http_r
+@@ -62,8 +89,217 @@ vlc_http_res_req(const struct vlc_http_r
          vlc_http_msg_add_creds_basic(req, false, res->username, res->password);
  
      /* Request context */
@@ -47,8 +47,8 @@
 +           (res->path == NULL ? "NULL" : res->path));
 +
 +    char *radiko_check_host = getenv("radiko_check_host");
-+    char *radiko_check_prefixpath = getenv("radiko_check_prefixpath");
-+    size_t radiko_check_prefixpath_len = ((radiko_check_prefixpath == NULL) ? 0 : strlen(radiko_check_prefixpath));
++    char *radiko_check_path = getenv("radiko_check_path");
++    size_t radiko_check_path_len = ((radiko_check_path == NULL) ? 0 : strlen(radiko_check_path));
 +
 +    char *radiko_auth_helper = getenv("radiko_auth_helper");
 +    char *radiko_user_agent_file = getenv("radiko_user_agent_file");
@@ -57,13 +57,28 @@
 +    if ((res->host != NULL)
 +        && (res->path != NULL)
 +        && (radiko_check_host != NULL)
-+        && (radiko_check_prefixpath != NULL)
++        && (radiko_check_path != NULL)
 +        && (strcmp(res->host, radiko_check_host) == 0)
-+        && (strncmp(res->path, radiko_check_prefixpath, radiko_check_prefixpath_len) == 0)
 +        && (radiko_auth_helper != NULL)
 +        && (radiko_user_agent_file != NULL)
 +        && (radiko_auth_header_file != NULL)
 +        ) {
++
++      size_t path_len = strlen(res->path);
++      if (path_len <= radiko_check_path_len) {
++        goto skip_radiko;
++      }
++      unsigned int i = 0;
++      bool found = false;
++      for (i = 0; i <= path_len - radiko_check_path_len; i += 1) {
++        if (strncmp(&res->path[i], radiko_check_path, radiko_check_path_len) == 0) {
++          found = true;
++          break;
++        }
++      }
++      if (! found) {
++        goto skip_radiko;
++      }
 +
 +      printf("*** HIT RADIKOPLAYLIST ***\n");
 +
@@ -155,8 +170,7 @@
 +          memset(buf, 0, buf_size);
 +
 +          if (read(fd, buf, buf_size) > 0) {
-+            unsigned i = 0;
-+            for (; buf[i] != ':' && buf[i] != '\0' && i < buf_size; i += 1);
++            for (i = 0; buf[i] != ':' && buf[i] != '\0' && i < buf_size; i += 1);
 +            char *useragent = &buf[i + 1];
 +
 +            printf("REUSE User-Agent: %s\n", useragent);

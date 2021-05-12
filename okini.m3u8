@@ -7,16 +7,16 @@
 https://shonanbeachfm.out.airtime.pro/shonanbeachfm_c
 
 #EXTINF:-1,J-WAVE
-https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=FMJ&l=30
+https://f-radiko.smartstream.ne.jp/FMJ/_definst_/simul-stream.stream/playlist.m3u8
 #EXTINF:-1,ＦＭヨコハマ
-https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=YFM&l=30
+https://f-radiko.smartstream.ne.jp/YFM/_definst_/simul-stream.stream/playlist.m3u8
 #EXTINF:-1,TOKYO FM
-https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=FMT&l=30
+https://f-radiko.smartstream.ne.jp/FMT/_definst_/simul-stream.stream/playlist.m3u8
 #EXTINF:-1,InterFM897
-https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=INT&l=30
+https://f-radiko.smartstream.ne.jp/INT/_definst_/simul-stream.stream/playlist.m3u8
 
 #EXTINF:-1,LOVE FM
-https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=LOVEFM&l=30
+https://f-radiko.smartstream.ne.jp/LOVEFM/_definst_/simul-stream.stream/playlist.m3u8
 
 #EXTINF:-1,NHKラジオ第1 東京
 https://nhkradioakr1-i.akamaihd.net/hls/live/511633/1-r1/1-r1-01.m3u8
@@ -38,36 +38,36 @@ https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=RAB&l=30
 https://16693.live.streamtheworld.com/AFNP_MSW_SC?csegid=34
 
 #EXTINF:-1,bayfm78
-https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=BAYFM78&l=30
+https://f-radiko.smartstream.ne.jp/BAYFM78/_definst_/simul-stream.stream/playlist.m3u8
 #EXTINF:-1,NACK5
-https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=NACK5&l=30
+https://f-radiko.smartstream.ne.jp/NACK5/_definst_/simul-stream.stream/playlist.m3u8
 #EXTINF:-1,FM FUJI
-https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=FM-FUJI&l=30
+https://f-radiko.smartstream.ne.jp/FM-FUJI/_definst_/simul-stream.stream/playlist.m3u8
 
 #EXTINF:-1,TBSラジオ
-https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=TBS&l=30
+https://f-radiko.smartstream.ne.jp/TBS/_definst_/simul-stream.stream/playlist.m3u8
 #EXTINF:-1,文化放送
-https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=QRR&l=30
+https://f-radiko.smartstream.ne.jp/QRR/_definst_/simul-stream.stream/playlist.m3u8
 #EXTINF:-1,ニッポン放送
-https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=LFR&l=30
+https://f-radiko.smartstream.ne.jp/LFR/_definst_/simul-stream.stream/playlist.m3u8
 #EXTINF:-1,ラジオ日本
-https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=JORF&l=30
+https://f-radiko.smartstream.ne.jp/JORF/_definst_/simul-stream.stream/playlist.m3u8
 #EXTINF:-1,ラジオNIKKEI第1
-https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=RN1&l=30
+https://f-radiko.smartstream.ne.jp/RN1/_definst_/simul-stream.stream/playlist.m3u8
 
 #EXTINF:-1,FM COCOLO
-https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=CCL&l=30
+https://f-radiko.smartstream.ne.jp/CCL/_definst_/simul-stream.stream/playlist.m3u8
 #EXTINF:-1,α-STATION FM京都
-https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=ALPHA-STATION&l=30
+https://f-radiko.smartstream.ne.jp/ALPHA-STATION/_definst_/simul-stream.stream/playlist.m3u8
 
 #EXTINF:-1,FM NORTH WAVE
-https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=NORTHWAVE&l=30
+https://f-radiko.smartstream.ne.jp/NORTHWAVE/_definst_/simul-stream.stream/playlist.m3u8
 #EXTINF:-1,ZIP-FM
-https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=ZIP-FM&l=30
+https://f-radiko.smartstream.ne.jp/ZIP-FM/_definst_/simul-stream.stream/playlist.m3u8
 #EXTINF:-1,FM802
-https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=802&l=30
+https://f-radiko.smartstream.ne.jp/802/_definst_/simul-stream.stream/playlist.m3u8
 #EXTINF:-1,CROSS FM
-https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=CROSSFM&l=30
+https://f-radiko.smartstream.ne.jp/CROSSFM/_definst_/simul-stream.stream/playlist.m3u8
 
 
 #EXTINF:-1,FMゆーとぴあ 湯沢市
@@ -164,47 +164,6 @@ http://jenny.torontocast.com:8078/stream
 # https://www.nogoumfm.net/
 #EXTINF:-1,Nogoum FM
 https://reach-audio.esteam.rocks/radio/8000/live.mp3
-
-#-----#-----#-----#-----#-----
-# over 10kW
-
-#EXTINF:-1,北海道・東北 / ＨＢＣラジオ HBC JP1
-https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=HBC&l=30
-#EXTINF:-1,北海道・東北 / ＳＴＶラジオ STV JP1
-https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=STV&l=30
-#EXTINF:-1,中部 / SBSラジオ SBS JP22
-https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=SBS&l=30
-#EXTINF:-1,中部 / CBCラジオ CBC JP23
-https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=CBC&l=30
-#EXTINF:-1,中部 / 東海ラジオ TOKAIRADIO JP23
-https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=TOKAIRADIO&l=30
-#EXTINF:-1,近畿 / KBS京都ラジオ KBS JP26
-https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=KBS&l=30
-#EXTINF:-1,近畿 / ABCラジオ ABC JP27
-https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=ABC&l=30
-#EXTINF:-1,近畿 / MBSラジオ MBS JP27
-https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=MBS&l=30
-#EXTINF:-1,近畿 / OBCラジオ大阪 OBC JP27
-https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=OBC&l=30
-#EXTINF:-1,近畿 / ラジオ関西 CRK JP28
-https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=CRK&l=30
-#EXTINF:-1,中国・四国 / ＲＳＫラジオ RSK JP33
-https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=RSK&l=30
-#EXTINF:-1,中国・四国 / RCCラジオ RCC JP34
-https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=RCC&l=30
-#EXTINF:-1,九州・沖縄 / RKBラジオ RKB JP40
-https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=RKB&l=30
-#EXTINF:-1,九州・沖縄 / KBCラジオ KBC JP40
-https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=KBC&l=30
-#EXTINF:-1,九州・沖縄 / RKKラジオ RKK JP43
-https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=RKK&l=30
-#EXTINF:-1,九州・沖縄 / ＭＢＣラジオ MBC JP46
-https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=MBC&l=30
-#EXTINF:-1,九州・沖縄 / RBCiラジオ RBC JP47
-https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=RBC&l=30
-#EXTINF:-1,九州・沖縄 / ラジオ沖縄 ROK JP47
-https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=ROK&l=30
-
 
 #-----#-----#-----#-----#-----#-----#-----#-----#-----#-----
 #EXTINF:-1,*** REBOOT(replace new process image) VLC ***

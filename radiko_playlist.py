@@ -56,10 +56,11 @@ for stations in root.iter('stations'):
         area_id = station.find('area_id').text
         ST[station_id] = { 'name': station_name, 'area_id': area_id }
 
-#    for t in sorted(ST.items(), key = lambda x:x[1]['area_id']):
-    for t in sorted(ST.items(), key = lambda x:int(re.sub(r"\D", "", x[1]['area_id']))):
+#    for t in sorted(ST.items(), key = lambda x: x[1]['area_id']):
+    for t in sorted(ST.items(), key = lambda x: re.sub(r"\D", "", x[1]['area_id']) + x[0]):
         title = '#EXTINF:-1,%s / %s %s %s\n' % (region_name, t[1]['name'], t[0], t[1]['area_id'])
-        uri = 'https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=%s&l=15\n\n' % (t[0])
+#        uri = 'https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=%s&l=15\n\n' % (t[0])
+        uri = 'https://f-radiko.smartstream.ne.jp/%s/_definst_/simul-stream.stream/playlist.m3u8\n\n' % (t[0])
 
         print(title, end = '')
         f.write(title)

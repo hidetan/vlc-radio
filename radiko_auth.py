@@ -194,8 +194,14 @@ def auth2(info, token, location, partial):
 
 
 def uripath2areaid(uri_path):
-    station_id = re.findall(r'station_id=(.*)&', uri_path)[0]
-    print('station_id=', station_id)
+    r = re.findall(r'station_id=(.*)&', uri_path)
+    if len(r) > 0:
+        station_id = r[0]
+        print('v2api:station_id=|%s|' % (station_id))
+    else:
+        r = re.findall(r'/(.*)/_definst_/simul-stream.stream/playlist.m3u8', uri_path)
+        station_id = r[0]
+        print('smartstream:station_id=', station_id)
 
     playlist = os.getenv('radiko_playlist', '/tmp/radiko.m3u8')
 
