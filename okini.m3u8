@@ -27,13 +27,13 @@ https://nhkradioakfm-i.akamaihd.net/hls/live/512290/1-fm/1-fm-01.m3u8
 https://radio1.bitmedia.ne.jp/hlsdata/fm834/playlist.m3u8
 
 #EXTINF:-1,Date fm エフエム仙台
-https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=DATEFM&l=30
+https://f-radiko.smartstream.ne.jp/DATEFM/_definst_/simul-stream.stream/playlist.m3u8
 #EXTINF:-1,fmいずみ 仙台市泉区
 http://mtist.as.smartstream.ne.jp/30018/livestream/playlist.m3u8
 #EXTINF:-1,TBCラジオ
-https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=TBC&l=30
+https://f-radiko.smartstream.ne.jp/TBC/_definst_/simul-stream.stream/playlist.m3u8
 #EXTINF:-1,ＲＡＢ青森放送
-https://radiko.jp/v2/api/ts/playlist.m3u8?station_id=RAB&l=30
+https://f-radiko.smartstream.ne.jp/RAB/_definst_/simul-stream.stream/playlist.m3u8
 #EXTINF:-1,AFN MISAWA
 https://16693.live.streamtheworld.com/AFNP_MSW_SC?csegid=34
 
