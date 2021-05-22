@@ -268,9 +268,11 @@ if __name__ == '__main__':
     #
     useragent_str = 'User-Agent: %s' % info['useragent']
     token_str = 'X-Radiko-Authtoken: %s' % token
+    area_str = 'X-Radiko-AreaId: %s' % area_id
 
     print('useragent=|%s|' % useragent_str)
     print('token=|%s|' % token_str)
+    print('area=|%s|' % area_str)
 
     user_agent_file = os.getenv('radiko_user_agent_file',
                                 '/tmp/radiko_header_useragent.txt')
@@ -281,7 +283,8 @@ if __name__ == '__main__':
     token_file = os.getenv('radiko_auth_header_file',
                            '/tmp/radiko_header_token.txt')
     f = open(token_file, 'w')
-    f.write(token_str)
+    f.write(token_str + '\n')
+    f.write(area_str + '\n')
     f.close()
 
 sys.exit(0)
