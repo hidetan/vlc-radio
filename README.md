@@ -15,10 +15,10 @@
  $ tar xf ./vlc-3.0.16.tar.xz
  $ cd vlc-3.0.16/
 
- $ patch -p2 -b < ../vlc-3.0.12_radiko.patch
- $ patch -p2 -b < ../vlc-3.0.12_retrytls.patch
- $ patch -p2 -b < ../vlc-3.0.12_webui_expand.patch
- $ patch -p2 -b < ../vlc-3.0.12_webui_title.patch
+ $ patch -p2 -b < ../vlc-3.0.16_radiko.patch
+ $ patch -p2 -b < ../vlc-3.0.16_retrytls.patch
+ $ patch -p2 -b < ../vlc-3.0.16_webui_expand.patch
+ $ patch -p2 -b < ../vlc-3.0.16_webui_title.patch
 
  $ time ./bootstrap
  about 10 minitues.
