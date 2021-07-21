@@ -19,6 +19,7 @@
  $ patch -p2 -b < ../vlc-3.0.16_retry_tls.patch
  $ patch -p2 -b < ../vlc-3.0.16_webui_expand.patch
  $ patch -p2 -b < ../vlc-3.0.16_webui_title.patch
+ $ patch -p2 -b < ../vlc-3.0.16_force_exit.patch
 
  $ time ./bootstrap
  about 10 minitues.

@@ -1,0 +1,51 @@
+--- ./vlc-3.0.16/src/playlist/thread.c.orig	2019-06-07 15:17:13.000000000 +0900
++++ ./vlc-3.0.16/src/playlist/thread.c	2021-07-21 20:41:40.473692575 +0900
+@@ -421,6 +421,32 @@ static playlist_item_t *NextItem( playli
+     return p_new;
+ }
+ 
++#include <sys/time.h>
++#define FORCE_EXIT_REQUEST_INTERVAL 5.0
++#define FORCE_EXIT_REQUEST_BURST    5
++unsigned int force_exit_request_count = 0;
++double force_exit_request_time = 0;
++void check_force_exit_request(void);
++void check_force_exit_request(void) {
++  struct timeval tm;
++  gettimeofday(&tm, NULL);
++  double current_time = (double)tm.tv_sec + ((double)tm.tv_usec / 1.0e6);
++  double interval_time = current_time - force_exit_request_time;
++  force_exit_request_count += 1;
++  printf("interval_time=%f, force_exit_request_count=%d\n", interval_time, force_exit_request_count);
++  if (force_exit_request_time > 0 && interval_time < FORCE_EXIT_REQUEST_INTERVAL) {
++    if (force_exit_request_count >= FORCE_EXIT_REQUEST_BURST) {
++      printf("force exit.\n");
++      char *argv[] = { (char *)"/bin/true", (char *)NULL };
++      int ret = execvp(argv[0], argv);
++      printf("execvp(%s) %d\n", argv[0], ret);
++    }
++  } else {
++    force_exit_request_count = 0;
++    force_exit_request_time = current_time;
++  }
++}
++
+ static bool LoopInput( playlist_t *p_playlist )
+ {
+     playlist_private_t *p_sys = pl_priv(p_playlist);
+@@ -434,6 +460,7 @@ static bool LoopInput( playlist_t *p_pla
+         if( p_sys->request.b_request || p_sys->killed )
+         {
+             PL_DEBUG( "incoming request - stopping current input" );
++            check_force_exit_request();
+             input_Stop( p_input );
+         }
+         vlc_cond_wait( &p_sys->signal, &p_sys->lock );
+@@ -516,6 +543,7 @@ static void *Thread ( void *data )
+ 
+         /* Playlist stopping */
+         msg_Dbg( p_playlist, "nothing to play" );
++        check_force_exit_request();
+         if( played && var_InheritBool( p_playlist, "play-and-exit" ) )
+         {
+             msg_Info( p_playlist, "end of playlist, exiting" );
