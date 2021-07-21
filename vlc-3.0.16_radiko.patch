@@ -1,5 +1,5 @@
---- ./vlc-3.0.12/modules/access/http/resource.c.orig	2018-02-12 07:13:08.000000000 +0900
-+++ ./vlc-3.0.12/modules/access/http/resource.c	2021-05-22 10:38:55.634444888 +0900
+--- ./vlc-3.0.16/modules/access/http/resource.c.orig	2018-02-12 07:13:08.000000000 +0900
++++ ./vlc-3.0.16/modules/access/http/resource.c	2021-07-10 08:28:36.356645839 +0900
 @@ -36,6 +36,33 @@
  #include "connmgr.h"
  #include "resource.h"
@@ -34,7 +34,7 @@
  static struct vlc_http_msg *
  vlc_http_res_req(const struct vlc_http_resource *res, void *opaque)
  {
-@@ -62,8 +89,231 @@ vlc_http_res_req(const struct vlc_http_r
+@@ -62,8 +89,236 @@ vlc_http_res_req(const struct vlc_http_r
          vlc_http_msg_add_creds_basic(req, false, res->username, res->password);
  
      /* Request context */
@@ -54,6 +54,9 @@
 +    char *radiko_user_agent_file = getenv("radiko_user_agent_file");
 +    char *radiko_auth_header_file = getenv("radiko_auth_header_file");
 +
++    char *radiko_reusekey_interval = getenv("radiko_reusekey_interval");
++    unsigned int reusekey_interval = ((radiko_reusekey_interval == NULL) ? 10 * 60 : atoi(radiko_reusekey_interval));
++
 +    if ((res->host != NULL)
 +        && (res->path != NULL)
 +        && (radiko_check_host != NULL)
@@ -70,9 +73,11 @@
 +      }
 +
 +      bool found = false;
++      unsigned int match_pos = 0;
 +      for (unsigned int i = 0; i <= path_len - radiko_check_path_len; i += 1) {
 +        if (strncmp(&res->path[i], radiko_check_path, radiko_check_path_len) == 0) {
 +          found = true;
++          match_pos = i;
 +          break;
 +        }
 +      }
@@ -86,12 +91,12 @@
 +          && (key_str[0][0] != '\0')
 +          && (key_str[0][0] != '\0')
 +          && (useragent_str[0] != '\0')
-+          && (strcmp(res->path, last_auth_playlist) == 0)
++          && (strncmp(res->path, last_auth_playlist, match_pos + radiko_check_path_len) == 0)
 +          ) {
 +
 +        double current_time = gettime();
-+        if (current_time - last_auth_time < 60) {
-+          printf("same playlistpath interval: %.3f\n",  gettime() - last_auth_time);
++        if (current_time - last_auth_time < reusekey_interval) {
++          printf("same playlistpath interval: %.3f < %u\n",  gettime() - last_auth_time, reusekey_interval);
 +
 +          for (unsigned int i = 0; i < sizeof(key_str) / sizeof(key_str[0]); i += 1) {
 +            if (key_str[i][0] != '\0' && val_str[i][0] != '\0') {

@@ -38,7 +38,8 @@ if [ -n "${radiko_playlist}" ]; then
 #    export radiko_check_host="radiko.jp"
 #    export radiko_check_path="/v2/api/ts/playlist.m3u8?station_id="
     export radiko_check_host="f-radiko.smartstream.ne.jp"
-    export radiko_check_path="/_definst_/simul-stream.stream/playlist.m3u8"
+    export radiko_check_path="/_definst_/simul-stream.stream/"
+    export radiko_reusekey_interval=$((15 * 60))
 
     export radiko_auth_helper="./radiko_auth.py"
     export radiko_auth_key="./radiko_key.txt"

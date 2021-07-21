@@ -199,7 +199,7 @@ def uripath2areaid(uri_path):
         station_id = r[0]
         print('v2api:station_id=|%s|' % (station_id))
     else:
-        r = re.findall(r'/(.*)/_definst_/simul-stream.stream/playlist.m3u8', uri_path)
+        r = re.findall(r'/(.*)/_definst_/simul-stream.stream/', uri_path)
         station_id = r[0]
         print('smartstream:station_id=', station_id)
 
@@ -241,7 +241,7 @@ if __name__ == '__main__':
 
     #
     fullkey_b64 = readKey()
-    print('fullkey_b64=', fullkey_b64)
+#    print('fullkey_b64=', fullkey_b64)
 
     #
     info = genRandomInfo()
