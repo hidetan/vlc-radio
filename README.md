@@ -16,7 +16,7 @@
  $ cd vlc-3.0.16/
 
  $ patch -p2 -b < ../vlc-3.0.16_radiko.patch
- $ patch -p2 -b < ../vlc-3.0.16_retrytls.patch
+ $ patch -p2 -b < ../vlc-3.0.16_retry_tls.patch
  $ patch -p2 -b < ../vlc-3.0.16_webui_expand.patch
  $ patch -p2 -b < ../vlc-3.0.16_webui_title.patch
 
