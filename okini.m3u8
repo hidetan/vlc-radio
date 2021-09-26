@@ -101,6 +101,12 @@ https://prod-3-82-192-167.wostreaming.net/ppm-jazz24aac-hlsc1.m3u8
 #EXTINF:-1,WNCU 90.7 FM Jazz Radio
 https://wncu.streamguys1.com/live
 
+# https://ottava.jp
+#EXTINF:-1,OTTAVA
+https://ottava2.out.airtime.pro/ottava2_a
+#EXTINF:-1,Voice of the Planet
+https://voiceoftheplanet.out.airtime.pro/voiceoftheplanet_a
+
 # https://www.hawaiianrainbow.com
 #EXTINF:-1,Hawaiian Rainbow
 http://stream1.hawaiianrainbow.com
