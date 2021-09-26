@@ -47,6 +47,7 @@ if [ -n "${radiko_playlist}" ]; then
     export radiko_auth_header_file="${TMPDIR}/radiko_header_token.txt"
 fi
 
+make_playlist "dabp_au_playlist" "dabp_au.m3u8" "./dabp_au_playlist.py"
 
 #
 podcast_playlist=${TMPDIR}/podcast.m3u8
@@ -106,6 +107,12 @@ __EOF__
     if [ -n "${csra_playlist}" ]; then
         echo '#EXTINF:-1,CSRA'
         echo "${csra_playlist}"
+        echo ''
+    fi
+
+    if [ -n "${dabp_au_playlist}" ]; then
+        echo '#EXTINF:-1,DAB+AU'
+        echo "${dabp_au_playlist}"
         echo ''
     fi
 
