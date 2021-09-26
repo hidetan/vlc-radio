@@ -1,0 +1,39 @@
+#EXTM3U
+# -*- coding: utf-8 -*-
+
+#-----#-----#-----#-----#-----#-----#-----#-----#-----#-----
+# https://www.rthk.hk/
+
+#EXTINF:-1,香港電台第一台 RTHK R1 FM926
+https://rthkaudio1-lh.akamaihd.net/i/radio1_1@355864/master.m3u8
+#EXTINF:-1,香港電台第二台 RTHK R2 FM948
+https://rthkaudio2-lh.akamaihd.net/i/radio2_1@355865/master.m3u8
+#EXTINF:-1,香港電台第三台 RTHK R3 AM567
+https://rthkaudio3-lh.akamaihd.net/i/radio3_1@355866/master.m3u8
+#EXTINF:-1,香港電台第四台 RHTK R4 FM976
+https://rthkaudio4-lh.akamaihd.net/i/radio4_1@355867/master.m3u8
+#EXTINF:-1,香港電台第五台 RHTK R5 AM783
+https://rthkaudio5-lh.akamaihd.net/i/radio5_1@355868/master.m3u8
+#EXTINF:-1,香港電台第六台 RHTK R6 AM675 中央人民広播電台 香港之声
+https://rthkaudio6cnr-lh.akamaihd.net/i/radio6cnr_1@575604/master.m3u8
+#EXTINF:-1,香港電台普通話台 RTHK Putonghua AM621
+https://rthkaudio6-lh.akamaihd.net/i/radiopth_1@355869/master.m3u8
+
+#-----#-----#-----#-----#-----#-----#-----#-----#-----#-----
+# http://www.metroradio.com.hk/
+
+#EXTINF:-1,新城財經台 METRO FINANCE Metro Showbiz FM
+https://metroradio-lh.akamaihd.net/i/104_h@349798/master.m3u8
+#EXTINF:-1,新城知訊台 METROINFO Metro Showbiz FM
+https://metroradio-lh.akamaihd.net/i/997_h@349799/master.m3u8
+#EXTINF:-1,新城采訊台 METRO PLUS AM.1044
+http://metroradio-lh.akamaihd.net/i/1044_h@349800/master.m3u8
+
+#-----#-----#-----#-----#-----#-----#-----#-----#-----#-----
+# https://www.881903.com/
+#EXTINF:-1,雷霆881
+#EXTINF:-1,叱咤903
+#EXTINF:-1,豁達864
+#-----#-----#-----#-----#-----#-----#-----#-----#-----#-----
+
+

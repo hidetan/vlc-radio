@@ -119,6 +119,8 @@ __EOF__
     echo "${PWD}/afn.m3u8"
     echo '#EXTINF:-1,北欧系'
     echo "${PWD}/nordic.m3u8"
+    echo '#EXTINF:-1,香港'
+    echo "${PWD}/hk.m3u8"
     echo '#EXTINF:-1,manual'
     echo "${PWD}/manual.m3u8"
 
