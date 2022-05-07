@@ -20,7 +20,7 @@ daemon_opt=""
 while true; do
 
     /usr/bin/time -v \
-                  ./vlc-3.0.16/build/bin/vlc-static \
+                  ./vlc-3.0.17.3/build/bin/vlc-static \
                   ${log_opt} \
                   ${daemon_opt} \
                   \

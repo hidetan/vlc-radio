@@ -10,10 +10,10 @@
  $ git clone https://github.com/hidetan/vlc-radio.git
 
  $ cd vlc-radio
- $ wget http://get.videolan.org/vlc/3.0.16/vlc-3.0.16.tar.xz
+ $ wget http://get.videolan.org/vlc/3.0.17.3/vlc-3.0.17.3.tar.xz
 
- $ tar xf ./vlc-3.0.16.tar.xz
- $ cd vlc-3.0.16/
+ $ tar xf ./vlc-3.0.17.3.tar.xz
+ $ cd vlc-3.0.17.3
 
  $ patch -p2 -b < ../vlc-3.0.16_radiko.patch
  $ patch -p2 -b < ../vlc-3.0.16_retry_tls.patch
@@ -26,7 +26,7 @@
 
  $ mkdir ./build
  $ cd ./build
- $ time ../configure --prefix=/opt/vlc-3.0.16
+ $ time ../configure --prefix=/opt/vlc-3.0.17.3
  about 7 minitues.
 
  $ time make

@@ -3,13 +3,13 @@
 #
 
 (
-    cd ./vlc-3.0.16/build/
+    cd ./vlc-3.0.17.3/build/
     make
 )
 
 source ./common.sh
 
-exec ./vlc-3.0.16/build/bin/vlc-static \
+exec ./vlc-3.0.17.3/build/bin/vlc-static \
      --verbose 2 \
      --playlist-tree \
      \
