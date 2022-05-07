@@ -3,6 +3,7 @@
 
 #-----#-----#-----#-----#-----#-----#-----#-----#-----#-----
 
+# https://www.beachfm.co.jp/about/help/
 #EXTINF:-1,湘南ビーチFM
 https://shonanbeachfm.out.airtime.pro/shonanbeachfm_c
 
@@ -19,9 +20,9 @@ https://f-radiko.smartstream.ne.jp/INT/_definst_/simul-stream.stream/playlist.m3
 https://f-radiko.smartstream.ne.jp/LOVEFM/_definst_/simul-stream.stream/playlist.m3u8
 
 #EXTINF:-1,NHKラジオ第1 東京
-https://nhkradioakr1-i.akamaihd.net/hls/live/511633/1-r1/1-r1-01.m3u8
+https://radio-stream.nhk.jp/hls/live/2023229/nhkradiruakr1/master.m3u8
 #EXTINF:-1,NHK-FM 東京
-https://nhkradioakfm-i.akamaihd.net/hls/live/512290/1-fm/1-fm-01.m3u8
+https://radio-stream.nhk.jp/hls/live/2023507/nhkradiruakfm/master.m3u8
 
 #EXTINF:-1,エフエム世田谷
 https://radio1.bitmedia.ne.jp/hlsdata/fm834/playlist.m3u8
@@ -54,6 +55,9 @@ https://f-radiko.smartstream.ne.jp/LFR/_definst_/simul-stream.stream/playlist.m3
 https://f-radiko.smartstream.ne.jp/JORF/_definst_/simul-stream.stream/playlist.m3u8
 #EXTINF:-1,ラジオNIKKEI第1
 https://f-radiko.smartstream.ne.jp/RN1/_definst_/simul-stream.stream/playlist.m3u8
+
+#EXTINF:-1,超!A&G+
+https://www.uniqueradio.jp/agplayer5/hls/mbr-ff.m3u8
 
 #EXTINF:-1,FM COCOLO
 https://f-radiko.smartstream.ne.jp/CCL/_definst_/simul-stream.stream/playlist.m3u8
@@ -106,6 +110,14 @@ https://wncu.streamguys1.com/live
 https://ottava2.out.airtime.pro/ottava2_a
 #EXTINF:-1,Voice of the Planet
 https://voiceoftheplanet.out.airtime.pro/voiceoftheplanet_a
+
+# https://chinesemusicworld.com/
+#EXTINF:-1,Chinese Classical Music Online Radio
+https://radio.chinesemusicworld.com/chinesemusic.ogg
+
+# https://kzoohawaii.com/
+#EXTINF:-1,KZOO HAWAII
+https://us2.streamingpulse.com/ssl/KZOO
 
 # https://www.hawaiianrainbow.com
 #EXTINF:-1,Hawaiian Rainbow

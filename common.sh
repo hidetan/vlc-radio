@@ -128,8 +128,8 @@ __EOF__
     echo "${PWD}/nordic.m3u8"
     echo '#EXTINF:-1,香港'
     echo "${PWD}/hk.m3u8"
-    echo '#EXTINF:-1,manual'
-    echo "${PWD}/manual.m3u8"
+    echo '#EXTINF:-1,misc'
+    echo "${PWD}/misc.m3u8"
 
     echo '#EXTINF:-1,pimoroni Pirate Radio default PL'
     echo 'https://github.com/pimoroni/phat-beat/raw/master/projects/vlc-radio/vlcd/etc/vlcd/default.m3u'
