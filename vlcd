@@ -20,7 +20,7 @@ daemon_opt=""
 while true; do
 
     /usr/bin/time -v \
-                  ./vlc-3.0.17.3/build/bin/vlc-static \
+		  ./vlc-3.0.18/build/bin/vlc-static \
                   ${log_opt} \
                   ${daemon_opt} \
                   \
@@ -48,6 +48,7 @@ while true; do
                   --http-host 0.0.0.0 --http-port 8080 --http-password raspberry \
                   \
                   --intf dummy \
+		  \
                   ${playlist}
 
 done

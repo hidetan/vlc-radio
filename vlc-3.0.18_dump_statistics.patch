@@ -1,0 +1,73 @@
+--- ./vlc-3.0.18/src/input/input.c.orig	2021-10-30 21:43:45.000000000 +0900
++++ ./vlc-3.0.18/src/input/input.c	2023-04-22 12:59:35.940853640 +0900
+@@ -34,6 +34,7 @@
+ #include <limits.h>
+ #include <assert.h>
+ #include <sys/stat.h>
++#include <time.h>
+ 
+ #include "input_internal.h"
+ #include "event.h"
+@@ -692,6 +693,8 @@ static void MainLoop( input_thread_t *p_
+ {
+     mtime_t i_intf_update = 0;
+     mtime_t i_last_seek_mdate = 0;
++    mtime_t i_play_start = mdate();
++    mtime_t i_dump_statistics = 0;
+ 
+     if( b_interactive && var_InheritBool( p_input, "start-paused" ) )
+         ControlPause( p_input, mdate() );
+@@ -762,6 +765,53 @@ static void MainLoop( input_thread_t *p_
+                 MainLoopStatistics( p_input );
+                 i_intf_update = now + INT64_C(250000);
+             }
++
++            if(now >= i_dump_statistics) {
++              char info_str[4096] = { 0 };
++              unsigned int p = 0;
++#define SCAT(_b, _p, _s) do { for (unsigned int _i = 0; (_s)[_i] != '\0' && (_p) + _i < sizeof(_b); _i += 1, (_p) += 1) (_b)[(_p)] = (_s)[_i]; } while (0)
++              
++              input_thread_private_t *priv = input_priv(p_input);
++              input_item_t *item = priv->p_item;
++              input_stats_t *st = item->p_stats;
++
++              time_t play_time = (now - i_play_start) / INT64_C(1000000);
++              struct tm ptm = { 0 };
++              gmtime_r(&play_time, &ptm);
++
++              char *fb_name = input_item_GetTitleFbName(item);
++              char *uri = input_item_GetURI(item);
++              msg_Info(p_input, "-- %s / %s | %02d:%02d:%02d", fb_name, uri, (ptm.tm_mday - 1) * 24 + ptm.tm_hour, ptm.tm_min, ptm.tm_sec);
++              if (fb_name) free(fb_name);
++              if (uri) free(uri);
++
++              vlc_mutex_lock(&priv->counters.counters_lock);
++              vlc_mutex_lock(&st->lock);
++              
++              for (int i = 0; i< item->i_categories; i++) {
++                msg_Info(p_input, "%s", item->pp_categories[i]->psz_name);
++                SCAT(info_str, p, "  ");
++                for (int j = 0; j < item->pp_categories[i]->i_infos; j++) {
++                  if (j > 0) SCAT(info_str, p, ", ");
++                  SCAT(info_str, p, item->pp_categories[i]->pp_infos[j]->psz_name);
++                  SCAT(info_str, p, ": ");
++                  SCAT(info_str, p, item->pp_categories[i]->pp_infos[j]->psz_value);
++                }
++                msg_Info(p_input, "%s", info_str);
++              }
++
++              msg_Info(p_input, "  Decoded: %lld, Played: %lld, Lost: %lld buffers",
++                       st->i_decoded_audio, st->i_played_abuffers, st->i_lost_abuffers);
++              msg_Info(p_input, "  Media data Size: %lld KiB (%.2f MiB), Input bitrate: %.2f kb/s",
++                       st->i_read_bytes / (1L << 10), st->i_read_bytes / (double)(1L << 20), (float)(st->f_input_bitrate *  8000));
++              msg_Info(p_input, "  Demuxed data Size: %lld KiB (%.2f MiB), content bitrate: %.2f kb/s\n",
++                       st->i_demux_read_bytes / (1L << 10), st->i_demux_read_bytes / (double)(1L << 20), (float)(st->f_demux_bitrate *  8000));
++
++              vlc_mutex_unlock(&st->lock);
++              vlc_mutex_unlock(&priv->counters.counters_lock);
++
++              i_dump_statistics = now + 15 /* sec */ * INT64_C(1000000);
++            }
+         }
+ 
+         /* Handle control */

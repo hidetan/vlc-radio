@@ -10,23 +10,28 @@
  $ git clone https://github.com/hidetan/vlc-radio.git
 
  $ cd vlc-radio
- $ wget http://get.videolan.org/vlc/3.0.17.3/vlc-3.0.17.3.tar.xz
+ $ wget https://get.videolan.org/vlc/3.0.18/vlc-3.0.18.tar.xz
 
- $ tar xf ./vlc-3.0.17.3.tar.xz
- $ cd vlc-3.0.17.3
+ $ tar xf ./vlc-3.0.18.tar.xz
+ $ cd vlc-3.0.18
 
  $ patch -p2 -b < ../vlc-3.0.16_radiko.patch
  $ patch -p2 -b < ../vlc-3.0.16_retry_tls.patch
  $ patch -p2 -b < ../vlc-3.0.16_webui_expand.patch
  $ patch -p2 -b < ../vlc-3.0.16_webui_title.patch
  $ patch -p2 -b < ../vlc-3.0.16_force_exit.patch
+ $ patch -p2 -b < ../vlc-3.0.18_vlc-3.0.18_dump_statistics.patch
+
+ $ wget https://code.videolan.org/videolan/vlc/-/raw/master/share/lua/playlist/youtube.lua
+ $ mv ./share/lua/playlist/youtube.lua ./share/lua/playlist/youtube.lua.bak
+ $ mv ./youtube.lua ./share/lua/playlist/youtube.lua
 
  $ time ./bootstrap
  about 10 minitues.
 
  $ mkdir ./build
  $ cd ./build
- $ time ../configure --prefix=/opt/vlc-3.0.17.3
+ $ time ../configure --prefix=/opt/vlc-3.0.18
  about 7 minitues.
 
  $ time make
