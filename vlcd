@@ -51,4 +51,8 @@ while true; do
 		  \
                   ${playlist}
 
+    sudo systemctl restart pulseaudio
+    sleep 3
+    systemctl status pulseaudio
+
 done
