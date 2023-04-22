@@ -2,62 +2,68 @@
 # -*- coding: utf-8 -*-
 
 #-----#-----#-----#-----#-----#-----#-----#-----#-----#-----
-# http://radio.linnrecords.com/index2.html
+# https://www.linn.co.uk/linn-radio
 
 #EXTINF:-1,Linn Radio
-#http://radio.linnrecords.com/cast/tunein.php/linnradio/playlist.pls
-http://89.16.185.174:8003/stream
-
-#EXTINF:-1,Linn Jazz
-#http://radio.linnrecords.com/cast/tunein.php/linnjazz/playlist.pls
-http://89.16.185.174:8000/stream
-
+http://radio.linn.co.uk:8003/autodj
 #EXTINF:-1,Linn Classical
-#http://radio.linnrecords.com/cast/tunein.php/linnclassical/playlist.pls
-http://89.16.185.174:8004/stream
-
+http://radio.linn.co.uk:8004/autodj
+#EXTINF:-1,Linn Jazz
+http://radio.linn.co.uk:8000/autodj
 
 #-----#-----#-----#-----#-----#-----#-----#-----#-----#-----
 # http://www.abacusradio.com/
 
-#EXTINF:-1,Abacus Radio Classical Abacus Beethoven
-http://185.80.221.113:8008/stream
-#EXTINF:-1,Abacus Radio Classical Abacus Mozart
-http://185.80.221.113:8046/stream
-
-#EXTINF:-1,Abacus Radio Comedy Abacus Goon Show
-http://185.80.221.113:8052/stream
-#EXTINF:-1,Abacus Radio Comedy British Comedy Radio
-http://185.80.221.113:7550/stream
-
-#EXTINF:-1,Abacus Radio Abacus Jazz
-http://185.80.221.113:8034/stream
-
-#EXTINF:-1,Abacus Radio Nature Abacus Ocean
-http://185.80.221.113:8023/stream
-#EXTINF:-1,Abacus Radio Nature Abacus Rain
-http://185.80.221.113:8000/stream
-#EXTINF:-1,Abacus Radio Nature Abacus Birdsong
-http://185.80.221.113:8040/stream
-
-#EXTINF:-1,Abacus Radio otr Abacus Crime
-http://185.80.221.113:7020/stream
-
+#EXTINF:-1,ABACUS Smooth Jazz and Easy Listening
+https://stream3.hippynet.co.uk:8008/;
 
 #-----#-----#-----#-----#-----#-----#-----#-----#-----#-----
-# https://en.j1fm.tokyo/
+# http://www.abacus.fm/
 
-#EXTINF:-1,J1FM J1 HITS
+#EXTINF:-1,ABACUS.FM Abacus Classical
+http://54.38.44.70:8016/stream
+#EXTINF:-1,ABACUS.FM Abacus Lute
+http://54.38.44.70:8036/stream
+#EXTINF:-1,ABACUS.FM Abacus Ocean
+http://54.38.44.70:8008/stream
+#EXTINF:-1,ABACUS.FM Abacus Rain
+http://54.38.44.70:8004/stream
+#EXTINF:-1,ABACUS.FM Abacus Birdsong
+http://54.38.44.70:8020/stream
+#EXTINF:-1,ABACUS.FM Abacus Mediation 523 Hz
+http://54.38.44.70:8028/stream
+#EXTINF:-1,ABACUS.FM Abacus Foghorns
+http://54.38.44.70:8032/stream
+
+#-----#-----#-----#-----#-----#-----#-----#-----#-----#-----
+# https://www.j1fm.tokyo/
+
+#EXTINF:-1,J1FM J1 HITS / 令和
 https://jenny.torontocast.com:2000/stream/J1HITS
-#EXTINF:-1,J1FM J1 XTRA
+#EXTINF:-1,J1FM J1 HD Southern California
+https://maggie.torontocast.com:2000/stream/J1HD
+#EXTINF:-1,J1FM J1 XTRA / 平成
 https://jenny.torontocast.com:2000/stream/J1XTRA
-#EXTINF:-1,J1FM J1 GOLD
+#EXTINF:-1,J1FM J1 GOLD / 昭和
 https://jenny.torontocast.com:2000/stream/J1GOLD
+#EXTINF:-1,REC Delmarva FM
+https://jenny.torontocast.com:2000/stream/Delmarva
+#EXTINF:-1,Michi-FM
+https://kathy.torontocast.com:4115/stream
 
+#-----#-----#-----#-----#-----#-----#-----#-----#-----#-----
+# naxos japan
+# - https://www.youtube.com/@naxosjapan
+
+#EXTINF:-1,Baroque Beats Radio 24/7
+https://www.youtube.com/watch?v=qtnxR6y0sT8
+#EXTINF:-1,Quiet Piano Radio : 24/7 Live
+https://www.youtube.com/watch?v=6V0VV2m_GqY
 
 #-----#-----#-----#-----#-----#-----#-----#-----#-----#-----
 # Cafe Music BGM channel
-# - https://www.youtube.com/channel/UCJhjE7wbdYAae1G25m0tHAA
+# - https://www.youtube.com/@cafemusicbgmchannel
+
 #EXTINF:-1,Relaxing Jazz Piano Radio : Slow Jazz Music : 24/7 Live Stream : Music For Work & Study
 https://www.youtube.com/watch?v=Dx5qFachd3A
 #EXTINF:-1,Living Coffee: Smooth Jazz Radio : Relaxing Jazz & Sweet Bossa Nova for Calm at Home
@@ -66,28 +72,31 @@ https://www.youtube.com/watch?v=SORD03t7nlo
 https://www.youtube.com/watch?v=6uddGul0oAc
 #EXTINF:-1,Rainy Jazz: Relaxing Jazz & Bossa Nova Music Radio : 24/7 Chill Out Piano & Guitar Music
 https://www.youtube.com/watch?v=DSGyEsJ17cI
-#EXTINF:-1,WORK Cafe: Cozy January Jazz : Warm Winter Jazz & Bossa Nova for Exquisite Mood
-https://www.youtube.com/watch?v=SN-E6bO0Te0
-#EXTINF:-1,Coffee Rain: Relaxing Jazz Music with Coffee Shop Ambience : Chill Music for Study Work
-https://www.youtube.com/watch?v=89XPBelvrZk
-#EXTINF:-1,Jazz & Work: Sweet Jazz & Bossa Nova Music for Happy Morning Working
-https://www.youtube.com/watch?v=mQMvRgVvxKE
 
+#-----#-----#-----#-----#-----#-----#-----#-----#-----#-----
+# Rainy Day Coffee
+# - https://www.youtube.com/@RainyDayCoffee24h
+
+#EXTINF:-1,Rainy Night Jazz Lounge with Relaxing Jazz Bar Classics for Woking Relaxing Studying
+https://www.youtube.com/watch?v=MFHYb1oRJKo
 
 #-----#-----#-----#-----#-----#-----#-----#-----#-----#-----
 # ChilledCow
-# - https://www.youtube.com/channel/UCSJ4gkVC6NrvII8umztf0Ow
+# - https://www.youtube.com/@LofiGirl
+
 #EXTINF:-1,lofi hip hop radio : beats to relax/study to
-https://www.youtube.com/watch?v=5qap5aO4i9A
+https://www.youtube.com/watch?v=jfKfPfyJRdk
+#EXTINF:-1,synthwave radio : beats to chill/game to
+https://www.youtube.com/watch?v=MVPTGNGiI-4
 #EXTINF:-1,lofi hip hop radio : beats to sleep/chill to
-https://www.youtube.com/watch?v=DWcJFNfaw9c
+https://www.youtube.com/watch?v=rUxyKA_-grg
 
 #-----#-----#-----#-----#-----#-----#-----#-----#-----#-----
 # STEEZYASFUCK
-# - https://www.youtube.com/channel/UCsIg9WMfxjZZvwROleiVsQg
-#EXTINF:-1,coffee shop radio // 24/7 lofi hip-hop beats
-https://www.youtube.com/watch?v=-5KAN9_CzSA
-#EXTINF:-1,lofi hip hop radio beats to sleep/study/relax to
-https://www.youtube.com/watch?v=rc9cjjEun_k
+# - https://www.youtube.com/@steezyasfvck
 
+#EXTINF:-1,coffee shop radio // 24/7 lofi hip-hop beats
+https://www.youtube.com/watch?v=e3L1PIY1pN8
+#EXTINF:-1,lofi hip hop radio beats to sleep/study/relax to
+https://www.youtube.com/watch?v=GmCZtGfb53c
 

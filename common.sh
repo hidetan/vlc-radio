@@ -64,8 +64,15 @@ http://reboot.reboot/reboot
 #EXTINF:-1,*** EXIT VLC ***
 http://exit.exit/exit
 
+#EXTINF:-1,辛坊治郎ズームそこまで言うか！
+https://www.omnycontent.com/d/playlist/67122501-9b17-4d77-84bd-a93d00dc791e/faed9f7a-6434-4e82-b4b3-abac000c1fa2/ba2cc47c-a5bf-4ecf-88c7-abac000db471/podcast.rss
+
+#EXTINF:-1,飯田浩司のOK! Cozy up！
+https://www.omnycontent.com/d/playlist/67122501-9b17-4d77-84bd-a93d00dc791e/3c31cad9-230a-4a5f-b487-a9de001adcdd/39cee2d4-8502-4b84-b11b-a9de001ca4cc/podcast.rss
+
 #EXTINF:0,SUNTORY SATURDAY WAITING BAR AVANTI
 https://www.tfm.co.jp/podcasts/avanti/podcast.xml
+
 __EOF__
 
 #
@@ -91,6 +98,17 @@ __EOF__
         echo "${radiko_playlist}"
         echo ''
     fi
+
+    echo '#EXTINF:-1,BBC'
+    echo "${PWD}/bbc.m3u8"
+    echo '#EXTINF:-1,AFN'
+    echo "${PWD}/afn.m3u8"
+    echo '#EXTINF:-1,北欧系'
+    echo "${PWD}/nordic.m3u8"
+    echo '#EXTINF:-1,香港'
+    echo "${PWD}/hk.m3u8"
+    echo '#EXTINF:-1,misc'
+    echo "${PWD}/misc.m3u8"
 
     if [ -n "${listenradio_playlist}" ]; then
         echo '#EXTINF:-1,ListenRadio'
@@ -119,17 +137,6 @@ __EOF__
     echo '#EXTINF:-1,podcast'
     echo "${podcast_playlist}"
     echo ''
-
-    echo '#EXTINF:-1,BBC'
-    echo "${PWD}/bbc.m3u8"
-    echo '#EXTINF:-1,AFN'
-    echo "${PWD}/afn.m3u8"
-    echo '#EXTINF:-1,北欧系'
-    echo "${PWD}/nordic.m3u8"
-    echo '#EXTINF:-1,香港'
-    echo "${PWD}/hk.m3u8"
-    echo '#EXTINF:-1,misc'
-    echo "${PWD}/misc.m3u8"
 
     echo '#EXTINF:-1,pimoroni Pirate Radio default PL'
     echo 'https://github.com/pimoroni/phat-beat/raw/master/projects/vlc-radio/vlcd/etc/vlcd/default.m3u'

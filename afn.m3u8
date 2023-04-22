@@ -2,43 +2,40 @@
 # -*- coding: utf-8 -*-
 
 #-----#-----#-----#-----#-----#-----#-----#-----#-----#-----
-# https://www.afnpacific.net/
+# https://afngo.net/
 
 #EXTINF:-1,AFN IWAKUNI
-https://14023.live.streamtheworld.com/AFNP_IWA_SC?csegid=33
+https://23113.live.streamtheworld.com/AFNP_IWAAAC.aac
 #EXTINF:-1,AFN MISAWA
-https://16693.live.streamtheworld.com/AFNP_MSW_SC?csegid=34
+https://14023.live.streamtheworld.com/AFNP_MSWAAC.aac
 #EXTINF:-1,AFN OKINAWA
-https://18703.live.streamtheworld.com/AFNP_OKN_SC?csegid=35
+https://25583.live.streamtheworld.com/AFNP_OKNAAC.aac
 #EXTINF:-1,AFN SASEBO
-https://20423.live.streamtheworld.com/AFNP_SBO_SC?csegid=37
+https://18723.live.streamtheworld.com/AFNP_SBOAAC.aac
 #EXTINF:-1,AFN TOKYO
-https://20813.live.streamtheworld.com/AFNP_TKO_SC?csegid=38
+https://23543.live.streamtheworld.com/AFNP_TKOAAC.aac
 
 #EXTINF:-1,AFN DAEGU
-https://13743.live.streamtheworld.com/AFNP_DGU_SC?csegid=31
+https://14023.live.streamtheworld.com/AFNP_DGUAAC.aac
 #EXTINF:-1,AFN HUMPHREYS
-https://17963.live.streamtheworld.com/AFNP_OSN_SC?csegid=36
+https://14613.live.streamtheworld.com/AFNP_OSNAAC.aac
 #EXTINF:-1,AFN KUNSAN
-https://22713.live.streamtheworld.com/AFNP_KSN_SC?csegid=32
+https://25433.live.streamtheworld.com/AFNP_KSNAAC.aac
 
-#EXTINF:-1,AFN 360 Global Country
-https://17963.live.streamtheworld.com/AFN_CTYP_SC?csegid=32
-#EXTINF:-1,AFN 360 Global Fans
-https://17533.live.streamtheworld.com/AFN_FAN_SC?csegid=32
-#EXTINF:-1,ANF 360 Global Freedom
-https://14103.live.streamtheworld.com/AFN_FREP_SC?csegid=32
-#EXTINF:-1,AFN 360 Global Gravity
-https://14103.live.streamtheworld.com/AFN_GRV_SC?csegid=32
-#EXTINF:-1,AFN 360 Global Hot AC
-https://16693.live.streamtheworld.com/AFN_HOTP_SC?csegid=32
-#EXTINF:-1,AFN 360 Global Joe Radio
-https://20423.live.streamtheworld.com/AFN_JOEP_SC?csegid=32
-#EXTINF:-1,AFN 360 Global Legacy
-https://17813.live.streamtheworld.com/AFN_LGYP_SC?csegid=32
-#EXTINF:-1,AFN 360 Global PowerTalk
-https://16693.live.streamtheworld.com/AFN_PTK_SC?csegid=32
-#EXTINF:-1,AFN 360 Global The Voice
-https://23113.live.streamtheworld.com/AFN_VCE_SC?csegid=32
-
+#EXTINF:-1,AFN GO Country
+https://16643.live.streamtheworld.com/AFN_CTYPAAC.aac
+#EXTINF:-1,AFN GO Freedom Rock
+https://17793.live.streamtheworld.com/AFN_FREPAAC.aac
+#EXTINF:-1,AFN GO The Blend
+https://15373.live.streamtheworld.com/AFN_HOTPAAC.aac
+#EXTINF:-1,AFN GO Joe Radio
+https://15373.live.streamtheworld.com/AFN_HOTPAAC.aac
+#EXTINF:-1,AFN GO Legacy
+https://14083.live.streamtheworld.com/AFN_LGYPAAC.aac
+#EXTINF:-1,AFN GO Fans
+https://18853.live.streamtheworld.com/AFN_FANAAC.aac
+#EXTINF:-1,AFN GO Power Talk
+https://15053.live.streamtheworld.com/AFN_PTKAAC.aac
+#EXTINF:-1,AFN GO The Voice
+https://18423.live.streamtheworld.com/AFN_VCEAAC.aac
 

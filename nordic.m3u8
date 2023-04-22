@@ -2,13 +2,12 @@
 # -*- coding: utf-8 -*-
 
 #-----#-----#-----#-----#-----#-----#-----#-----#-----#-----
-#EXTM3U
 # https://radio.nrk.no/
 # https://lyd.nrk.no/
 
-#EXTINF:-1,NRK P1 ostlandssendingen
-#https://lyd.nrk.no/nrk_radio_p1_ostlandssendingen_aac_h.m3u
-http://lyd.nrk.no:80/nrk_radio_p1_ostlandssendingen_aac_h?_hdr=0
+#EXTINF:-1,NRK P1 stor-oslo
+#https://lyd.nrk.no/nrk_radio_p1_stor-oslo_aac_h.m3u
+http://lyd.nrk.no:80/nrk_radio_p1_stor-oslo_aac_h?_hdr=0
 
 #EXTINF:-1,NRK P1+
 #https://lyd.nrk.no/nrk_radio_p1pluss_aac_h.m3u
@@ -75,22 +74,18 @@ http://lyd.nrk.no:80/nrk_radio_p3x_aac_h?_hdr=0
 #EXTM3U
 # https://sverigesradio.se/
 # https://sverigesradio.se/grupp/10632
+# https://sverigesradio.se/artikel/p2-i-320-kbps
 
 #EXTINF:-1,Sveriges Radio P1
 #https://sverigesradio.se/topsy/direkt/132-hi-aac.m3u
 https://http-live.sr.se/p1-aac-192
 
 #EXTINF:-1,Sveriges Radio P2
-#https://sverigesradio.se/topsy/direkt/2562-hi-aac.m3u
-https://http-live.sr.se/p2-aac-192
+https://http-live.sr.se/p2musik-aac-320
 
 #EXTINF:-1,Sveriges Radio P3
 #https://sverigesradio.se/topsy/direkt/164-hi-aac.m3u
 https://http-live.sr.se/p3-aac-192
-
-#EXTINF:-1,Sveriges Radio P4 Stockholm
-#https://sverigesradio.se/topsy/direkt/701-hi-aac.m3u
-https://http-live.sr.se/p4stockholm-aac-192
 
 #EXTINF:-1,Sveriges Radio Ekot
 #https://sverigesradio.se/topsy/direkt/4540-hi-aac.m3u
@@ -99,6 +94,10 @@ https://http-live.sr.se/ekotsanderdirekt-aac-192
 #EXTINF:-1,Sveriges Radio P4 Plus
 #https://sverigesradio.se/topsy/direkt/4951-hi-aac.m3u
 https://http-live.sr.se/srextra17-aac-192
+
+#EXTINF:-1,Sveriges Radio P4 Stockholm
+#https://sverigesradio.se/topsy/direkt/701-hi-aac.m3u
+https://http-live.sr.se/p4stockholm-aac-192
 
 #EXTINF:-1,Sveriges Radio P3 Din gata
 #https://sverigesradio.se/topsy/direkt/2576-hi-aac.m3u
@@ -124,10 +123,31 @@ https://http-live.sr.se/srsapmi-aac-192
 #https://sverigesradio.se/topsy/direkt/226-hi-aac.m3u
 https://http-live.sr.se/sisuradio-aac-192
 
+#EXTINF:-1,Sveriges Radio SR Extra 01
+https://sverigesradio.se/topsy/direkt/2383-hi-aac.m3u
+#EXTINF:-1,Sveriges Radio SR Extra 02
+https://sverigesradio.se/topsy/direkt/2384-hi-aac.m3u
+#EXTINF:-1,Sveriges Radio SR Extra 03
+https://sverigesradio.se/topsy/direkt/2385-hi-aac.m3u
+#EXTINF:-1,Sveriges Radio SR Extra 04
+https://sverigesradio.se/topsy/direkt/2386-hi-aac.m3u
+#EXTINF:-1,Sveriges Radio SR Extra 05
+https://sverigesradio.se/topsy/direkt/2387-hi-aac.m3u
+#EXTINF:-1,Sveriges Radio SR Extra 06
+https://sverigesradio.se/topsy/direkt/2388-hi-aac.m3u
+#EXTINF:-1,Sveriges Radio SR Extra 07
+https://sverigesradio.se/topsy/direkt/2389-hi-aac.m3u
+#EXTINF:-1,Sveriges Radio SR Extra 08
+https://sverigesradio.se/topsy/direkt/2390-hi-aac.m3u
+#EXTINF:-1,Sveriges Radio SR Extra 09
+https://sverigesradio.se/topsy/direkt/3268-hi-aac.m3u
+#EXTINF:-1,Sveriges Radio SR Extra 10
+https://sverigesradio.se/topsy/direkt/3269-hi-aac.m3u
+
+
 #-----#-----#-----#-----#-----#-----#-----#-----#-----#-----
 #EXTM3U
 # https://www.dr.dk/
-# https://www.dr.dk/hjaelp/digtal-radio/direkte-links-til-dr-radio-paa-nettet
 
 #EXTINF:-1,Denmarks Radio P1
 https://drliveradio.akamaized.net/hls/live/2022411/p1/masterab.m3u8
@@ -157,46 +177,44 @@ https://drliveradio.akamaized.net/hls/live/2022411/p8jazz/masterab.m3u8
 # https://github.com/oniongarlic/yle-api
 
 #EXTINF:-1,Yle Radio 1
-http://yleuni-f.akamaihd.net/i/yleliveradiohd_1@113878/master.m3u8
-
-#EXTINF:-1,Yle Radio Suomi
-http://yleuni-f.akamaihd.net/i/yleliveradiohd_3@113880/master.m3u8
+https://yleradiolive.akamaized.net/hls/live/2027672/in-YleRadio1/master.m3u8
 
 #EXTINF:-1,YleX
-http://yleuni-f.akamaihd.net/i/yleliveradiohd_2@113879/master.m3u8
+https://yleradiolive.akamaized.net/hls/live/2027674/in-YleX/master.m3u8
+
+#EXTINF:-1,Yle Radio Suomi Helsinki
+https://yleradiolive.akamaized.net/hls/live/2027675/in-YleRS/master.m3u8
 
 #EXTINF:-1,Yle Puhe
-http://yleuni-f.akamaihd.net/i/yleliveradiohd_5@113882/master.m3u8
-
-#EXTINF:-1,Yle X3M
-http://yleuni-f.akamaihd.net/i/yleliveradiohd_6@113883/master.m3u8
+https://yleradiolive.akamaized.net/hls/live/2027677/in-YlePuhe/master.m3u8
 
 #EXTINF:-1,Yle Klassinen
-http://yleuni-f.akamaihd.net/i/yleliveradiohd_4@113881/master.m3u8
+https://yleradiolive.akamaized.net/hls/live/2027676/in-YleKlassinen/master.m3u8
+
+#EXTINF:-1,Yle Sami radio
+https://yleradiolive.akamaized.net/hls/live/2027680/in-YleSami/master.m3u8
 
 #EXTINF:-1,Yle Radio Vega
-http://yleuni-f.akamaihd.net/i/yleliveradiohd_7@113884/master.m3u8
+https://yleradiolive.akamaized.net/hls/live/2027679/in-YleVega/master.m3u8
+
+#EXTINF:-1,Yle X3M
+https://yleradiolive.akamaized.net/hls/live/2027678/in-YleX3M/master.m3u8
 
 #EXTINF:-1,Yle Helsinki
 http://yleuni-f.akamaihd.net/i/yleliveradiohd_3@113880/master.m3u8
-
-#EXTINF:-1,Yle Sami radio
-http://yleuni-f.akamaihd.net/i/yleliveradiohd_33@113910/master.m3u8
-
 
 #-----#-----#-----#-----#-----#-----#-----#-----#-----#-----
 #EXTM3U
 # https://www.ruv.is/
 
 #EXTINF:-1,RUV Ras 1
-https://ruv-ras1-live-hls.secure.footprint.net/hls-live/ruv-ras1/_definst_/live.m3u8
+https://ruv-radio-live.akamaized.net/streymi/ras1/ras1.m3u8
 
 #EXTINF:-1,RUV Ras 2
-https://ruv-ras2-live-hls.secure.footprint.net/hls-live/ruv-ras2/_definst_/live.m3u8
+https://ruv-radio-live.akamaized.net/streymi/ras2/ras2.m3u8
 
 #EXTINF:-1,RUV Rondo
-https://ruv-rondo-live-hls.secure.footprint.net/hls-live/ruv-ras3/_definst_/live.m3u8
-
+https://ruv-radio-live.akamaized.net/streymi/rondo/rondo.m3u8
 
 #-----#-----#-----#-----#-----#-----#-----#-----#-----#-----
 

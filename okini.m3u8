@@ -3,40 +3,29 @@
 
 #-----#-----#-----#-----#-----#-----#-----#-----#-----#-----
 
+#-----#-----#-----#-----#-----
 # https://www.beachfm.co.jp/about/help/
 #EXTINF:-1,湘南ビーチFM
 https://shonanbeachfm.out.airtime.pro/shonanbeachfm_c
+#-----#-----#-----#-----#-----
 
 #EXTINF:-1,J-WAVE
 https://f-radiko.smartstream.ne.jp/FMJ/_definst_/simul-stream.stream/playlist.m3u8
 #EXTINF:-1,ＦＭヨコハマ
 https://f-radiko.smartstream.ne.jp/YFM/_definst_/simul-stream.stream/playlist.m3u8
-#EXTINF:-1,TOKYO FM
-https://f-radiko.smartstream.ne.jp/FMT/_definst_/simul-stream.stream/playlist.m3u8
-#EXTINF:-1,InterFM897
-https://f-radiko.smartstream.ne.jp/INT/_definst_/simul-stream.stream/playlist.m3u8
 
 #EXTINF:-1,LOVE FM
 https://f-radiko.smartstream.ne.jp/LOVEFM/_definst_/simul-stream.stream/playlist.m3u8
 
 #EXTINF:-1,NHKラジオ第1 東京
 https://radio-stream.nhk.jp/hls/live/2023229/nhkradiruakr1/master.m3u8
+
+#EXTINF:-1,TOKYO FM
+https://f-radiko.smartstream.ne.jp/FMT/_definst_/simul-stream.stream/playlist.m3u8
+#EXTINF:-1,InterFM897
+https://f-radiko.smartstream.ne.jp/INT/_definst_/simul-stream.stream/playlist.m3u8
 #EXTINF:-1,NHK-FM 東京
 https://radio-stream.nhk.jp/hls/live/2023507/nhkradiruakfm/master.m3u8
-
-#EXTINF:-1,エフエム世田谷
-https://radio1.bitmedia.ne.jp/hlsdata/fm834/playlist.m3u8
-
-#EXTINF:-1,Date fm エフエム仙台
-https://f-radiko.smartstream.ne.jp/DATEFM/_definst_/simul-stream.stream/playlist.m3u8
-#EXTINF:-1,fmいずみ 仙台市泉区
-http://mtist.as.smartstream.ne.jp/30018/livestream/playlist.m3u8
-#EXTINF:-1,TBCラジオ
-https://f-radiko.smartstream.ne.jp/TBC/_definst_/simul-stream.stream/playlist.m3u8
-#EXTINF:-1,ＲＡＢ青森放送
-https://f-radiko.smartstream.ne.jp/RAB/_definst_/simul-stream.stream/playlist.m3u8
-#EXTINF:-1,AFN MISAWA
-https://16693.live.streamtheworld.com/AFNP_MSW_SC?csegid=34
 
 #EXTINF:-1,bayfm78
 https://f-radiko.smartstream.ne.jp/BAYFM78/_definst_/simul-stream.stream/playlist.m3u8
@@ -44,20 +33,6 @@ https://f-radiko.smartstream.ne.jp/BAYFM78/_definst_/simul-stream.stream/playlis
 https://f-radiko.smartstream.ne.jp/NACK5/_definst_/simul-stream.stream/playlist.m3u8
 #EXTINF:-1,FM FUJI
 https://f-radiko.smartstream.ne.jp/FM-FUJI/_definst_/simul-stream.stream/playlist.m3u8
-
-#EXTINF:-1,TBSラジオ
-https://f-radiko.smartstream.ne.jp/TBS/_definst_/simul-stream.stream/playlist.m3u8
-#EXTINF:-1,文化放送
-https://f-radiko.smartstream.ne.jp/QRR/_definst_/simul-stream.stream/playlist.m3u8
-#EXTINF:-1,ニッポン放送
-https://f-radiko.smartstream.ne.jp/LFR/_definst_/simul-stream.stream/playlist.m3u8
-#EXTINF:-1,ラジオ日本
-https://f-radiko.smartstream.ne.jp/JORF/_definst_/simul-stream.stream/playlist.m3u8
-#EXTINF:-1,ラジオNIKKEI第1
-https://f-radiko.smartstream.ne.jp/RN1/_definst_/simul-stream.stream/playlist.m3u8
-
-#EXTINF:-1,超!A&G+
-https://www.uniqueradio.jp/agplayer5/hls/mbr-ff.m3u8
 
 #EXTINF:-1,FM COCOLO
 https://f-radiko.smartstream.ne.jp/CCL/_definst_/simul-stream.stream/playlist.m3u8
@@ -73,6 +48,37 @@ https://f-radiko.smartstream.ne.jp/802/_definst_/simul-stream.stream/playlist.m3
 #EXTINF:-1,CROSS FM
 https://f-radiko.smartstream.ne.jp/CROSSFM/_definst_/simul-stream.stream/playlist.m3u8
 
+#EXTINF:-1,TBSラジオ
+https://f-radiko.smartstream.ne.jp/TBS/_definst_/simul-stream.stream/playlist.m3u8
+#EXTINF:-1,文化放送
+https://f-radiko.smartstream.ne.jp/QRR/_definst_/simul-stream.stream/playlist.m3u8
+#EXTINF:-1,ニッポン放送
+https://f-radiko.smartstream.ne.jp/LFR/_definst_/simul-stream.stream/playlist.m3u8
+#EXTINF:-1,ラジオ日本
+https://f-radiko.smartstream.ne.jp/JORF/_definst_/simul-stream.stream/playlist.m3u8
+#EXTINF:-1,ラジオNIKKEI第1
+https://f-radiko.smartstream.ne.jp/RN1/_definst_/simul-stream.stream/playlist.m3u8
+
+#-----#-----#-----#-----#-----
+# https://www.joqr.co.jp/ag/
+#EXTINF:-1,超!A&G+
+https://www.uniqueradio.jp/agplayer5/hls/mbr-ff.m3u8
+#-----#-----#-----#-----#-----
+# https://fmsetagaya.com/
+#EXTINF:-1,エフエム世田谷
+https://radio1.bitmedia.ne.jp/hlsdata/fm834/playlist.m3u8
+#-----#-----#-----#-----#-----
+
+#EXTINF:-1,Date fm エフエム仙台
+https://f-radiko.smartstream.ne.jp/DATEFM/_definst_/simul-stream.stream/playlist.m3u8
+#EXTINF:-1,fmいずみ 仙台市泉区
+http://mtist.as.smartstream.ne.jp/30018/livestream/playlist.m3u8
+#EXTINF:-1,TBCラジオ
+https://f-radiko.smartstream.ne.jp/TBC/_definst_/simul-stream.stream/playlist.m3u8
+#EXTINF:-1,ＲＡＢ青森放送
+https://f-radiko.smartstream.ne.jp/RAB/_definst_/simul-stream.stream/playlist.m3u8
+#EXTINF:-1,AFN MISAWA
+https://14023.live.streamtheworld.com/AFNP_MSWAAC.aac
 
 #EXTINF:-1,FMゆーとぴあ 湯沢市
 http://mtist.as.smartstream.ne.jp/30030/livestream/playlist.m3u8
@@ -91,7 +97,7 @@ http://mtist.as.smartstream.ne.jp/30069/livestream/playlist.m3u8
 #-----#-----#-----#-----#-----
 # https://smoothjazz.com.pl
 #EXTINF:-1,SmoothJazz.com.pl
-http://stream14.shoutcastsolutions.com:8057/64stream
+ http://stream14.shoutcastsolutions.com:8057/64stream
 
 # https://www.wanderingsheep.tv/JazzCafeRadio/
 #EXTINF:-1,Jazz Cafe
@@ -142,9 +148,9 @@ http://43.241.137.236:8000/kuzoodzo
 http://43.241.137.236:8000/Kuzooeng
 
 # http://www.bbs.bt/news/
-#EXTINF:-1,BBS1
+#EXTINF:-1,Bhutan Broadcasting Service Radio-1
 http://202.144.155.12/radio1
-#EXTINF:-1,BBS2
+#EXTINF:-1,Bhutan Broadcasting Service Radio-2
 http://202.144.155.12/radio2
 
 #-----#-----#-----#-----#-----
@@ -179,13 +185,17 @@ http://jenny.torontocast.com:8078/stream
 #EXTINF:-1,Nogoum FM
 https://reach-audio.esteam.rocks/radio/8000/live.mp3
 
-#-----#-----#-----#-----#-----#-----#-----#-----#-----#-----
-#EXTINF:-1,*** REBOOT(replace new process image) VLC ***
-http://reboot.reboot/reboot
 
+#-----#-----#-----#-----#-----#-----#-----#-----#-----#-----
 #EXTINF:-1,*** REBOOT(process termination) VLC ***
 http://exit.exit/exit
 
-#EXTINF:0,NHKラジオニュース
+#EXTINF:-1,NHKラジオニュース
 https://www.nhk.or.jp/r-news/podcast/nhkradionews.xml
+
+#EXTINF:-1,朝日新聞アルキキ 最新ニュース
+https://www.omnycontent.com/d/playlist/1e3bd144-9b57-451a-93cf-ac0e00e74446/4ed5fcbf-299a-4d2d-bde1-acc4009cef22/ee64c498-786d-4155-962a-acc4009cef3e/podcast.rss
+
+#EXTINF:-1,ながら日経
+https://anchor.fm/s/1dcdf394/podcast/rss
 
